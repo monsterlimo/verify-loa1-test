@@ -15,7 +15,7 @@
 
     <!-- <a href="{{ idpRoot }}/{{ idp.slug }}/verify?requestId={{ requestId }}{% if verify != null %}&amp;verify={{ verify }}{% endif %}" class="button">Continue to {{ idp.name }}</a> -->
 
-    <a href="{{ idpRoot }}/{{ idp.slug }}/verify{{formQuery | safe}}" class="button">Continue to {{ idp.name }}</a>
+    <a href="https://nhs-id-3.herokuapp.com/{{ idp.slug }}/create-account{{formQuery | safe}}" class="button">Continue to {{ idp.name }}</a>
 
     <p>or <a href="javascript:history.back()">choose another certified company</a></p>
   </div>
