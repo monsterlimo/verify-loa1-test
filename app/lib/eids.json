@@ -1,0 +1,52 @@
+[
+  {
+    "name"    : "germany",
+    "country" : "Germany",
+    "slug"    : "Personalausweis"
+  },
+  {
+    "name"    : "france",
+    "country" : "France",
+    "slug"    : "France Connect"
+  },
+  {
+    "name"    : "italy",
+    "country" : "Italy",
+    "slug"    : "SPID"
+  },
+  {
+    "name"    : "spain",
+    "country" : "Spain",
+    "slug"    : "DNIe"
+  },
+  {
+    "name"    : "netherlands",
+    "country" : "Netherlands",
+    "slug"    : "DigiID"
+  },
+  {
+    "name"    : "belgium",
+    "country" : "Belgium",
+    "slug"    : "Fedict"
+  },
+  {
+    "name"    : "sweden",
+    "country" : "Sweden",
+    "slug"    : "Mobilt BankID/BankID"
+  },
+  {
+    "name"    : "denmark",
+    "country" : "Denmark",
+    "slug"    : "NemID"
+  },
+  {
+    "name"    : "estonia",
+    "country" : "Estonia",
+    "slug"    : "eesti"
+  },
+  {
+    "name"    : "austria",
+    "country" : "Austria",
+    "slug"    : "Bürgerkarte"
+  }
+]

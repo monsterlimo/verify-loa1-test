@@ -1,0 +1,458 @@
+{% extends "govuk_template.html" %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+  <link rel=stylesheet href="/public/stylesheets/driving-licence-details.css" type="text/css" media="screen">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="/public/javascripts/common.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<!--   <div class='header-context' id='global-breadcrumb'>
+    <nav role='navigation'>
+      <ol class='group'>
+        <li>
+          <a href='./register-signin' data-outbound="true">Home</a>
+        </li>
+        <li>
+          Your driving licence
+        </li>
+      </ol>
+    </nav>
+  </div> -->
+
+<div class='transaction service' id='wrapper'>
+
+    <section class='group category-page' id='content' role='main'>
+
+       
+
+      <header class='page-header group'>
+        <hgroup>
+          <h1>
+            <span>Services</span>
+            Your driving licence
+          </h1>
+        </hgroup>
+        <nav class='skip-to-related'>
+            <a href='#related'>Not what you're looking for? ↓</a>
+        </nav>
+      </header>
+
+      <div class='browse-container full-width group driver-profile'>
+
+        <ul class='nav nav-tabs' id='myTab'>
+          <li class='active'>
+            <a data-toggle='tab' href='#DriverDetails' id='driverDetailsTab'>
+            Your details
+            </a>
+          </li>
+          <li>
+            <a data-toggle='tab' href='#Entitlements' id='entitlementsTab'>What you can drive</a>
+          </li>
+          <li>
+            <a data-toggle='tab' href='#Endorsements' id='endorsementsTab'>Penalty points and disqualifications</a>
+          </li>
+        </ul>
+        <input id='reloadValue' name='reloadValue' type='hidden' value='1371207075334'>
+
+        <div class='tab-content'>
+          <div class='tab-pane active' id='DriverDetails'>
+            <div class='row-fluid'>
+
+              <div class='span8'>
+
+              <div class="govuk-box-highlight">
+                <p>Your driving licence check code:</br>
+                <span class="heading-xlarge">NPsvZW57</span></p>
+              </div>
+                </br>
+
+                <h2 class='h2'>
+                  Personal Details
+                </h2>
+                <ul class='details'>
+                  <li>
+                    <span>Name:</span>
+                    <strong>
+                    Joe Bloggs 
+                    </strong>
+                  </li>
+                  <li>
+                    <span><abbr title='Date of Birth'></abbr>Date of birth:</span>
+                    <strong>1 January 1985 (32 years old)</strong>
+                  </li>
+<!--                <li>
+                    <span>Gender:</span>
+                    <strong>Male</strong>
+                  </li> -->
+                  <li>
+                    <span>Address:</span>
+
+                    <strong>
+                       1 House, The Street, The Town, AB1 2CD
+                    </strong>
+
+                    <span><a href="/uplift-warning{{formQuery}}&uplifturl=driving-licence-update-address">Change address</a></span>
+                  </li>
+                </ul>
+                <h2 class='h2'>
+                  Licence Details
+                </h2>
+                <ul class='details'>
+                  <li>
+                      <span>Driving Status:</span>
+                      <strong>Full Licence</strong>
+                  </li>
+                  <li>
+                    <span>Valid from:</span>
+                    <strong>20 February 2008</strong>
+                  </li>
+                  <li>
+                    <span>Valid until:</span>
+                    <strong>20 February 2018</strong>
+                  </li>
+                  <li>
+                    <span>driving licence Number:</span>
+                    <strong>JOE010119BL15L </strong>
+                  </li>
+                  <!-- Check for number -->
+                  <li>
+                    <span>Licence Issue Number:</span>
+                    <strong>35</strong>
+                  </li>
+                </ul>
+
+              </div>
+
+              <div class='span4 summary'>
+                <div class='well well-medium'>
+                  <h3>
+                    <a href='#Entitlements' id='EntitlementsWell' data-outbound="y">What you can drive</a>
+                  </h3>
+                  <p>View your current driving entitlements.</p>
+                </div>
+                <div class='well well-medium'>
+                  <h3>
+                    <a href='#Endorsements' id='EndorsementsWell' data-outbound="y">Penalty points and disqualifications</a>
+                  </h3>
+                  <p>You currently have 0 penalty points.</p>
+              </div>
+            </div>
+            <div class='span4 summary'>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class='tab-pane' id='Entitlements'>
+          <h2 class='h2'>What you can drive</h2>
+          <div class='row-fluid'>
+            <div class='span12'>
+              <h2 class='h2'>
+                Full Entitlements
+              </h2>
+              <div class='accordion full-Entitlements' data-minimum-div-shown='3' id='fe_accordion'>
+                <div class='accordion-group'>
+                  <div class='accordion-heading'>
+                    <a class='accordion-toggle collapsed' data-parent='#fe_accordion' data-toggle='collapse' href='#collapse_fe_0'>
+                      <span class='col'>Category : A1</span>
+                      <span class='col'>Valid From : 20-02-08</span>
+                      <span class='col'>Valid To : 20-02-18</span>
+                      <span class='col pull-right expando'></span>
+                    </a>
+                  </div>
+                  <div class='accordion-body collapse' id='collapse_fe_0'>
+                    <div class='accordion-inner'>
+                      <div class='row-fluid'>
+                        <div class='span3'>
+                          <p class='p-heading image-Margin-Pull'>
+                            <strong>Category</strong>
+                          </p>
+                          <img alt='Image of category A1 vehicle' class='entitlement-icon image-Middle-Align' src='/public/images/categories/A1.png'>
+                        <span>
+                          <strong>A1</strong>
+                        </span>
+                      <div>
+                      <strong>Valid From</strong>:
+                      <span>20-02-08</span>
+                    </div>
+                    <div>
+                      <strong>Valid To</strong>:
+                      <span>20-02-18</span>
+                    </div>
+                  </div>
+                  <div class='span4'>
+                    <p>
+                      <strong>Description</strong>
+                    </p>
+                    <span>You can drive motorbikes with engine size up to 125cc, power output up to 11kW and power/weight ratio up to 0.1kW/kg</span>
+                  </div>
+                  <div class='span4'>
+                    <p>
+                      <strong>Restriction Codes</strong>
+                    </p>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='accordion-group'>
+            <div class='accordion-heading'>
+              <a class='accordion-toggle collapsed' data-parent='#fe_accordion' data-toggle='collapse' href='#collapse_fe_1'>
+                <span class='col'>Category : B</span>
+                <span class='col'>Valid From : 20-02-08</span>
+                <span class='col'>Valid To : 20-02-18</span>
+                <span class='col pull-right expando'></span>
+              </a>
+            </div>
+            <div class='accordion-body collapse' id='collapse_fe_1'>
+              <div class='accordion-inner'>
+                <div class='row-fluid'>
+                  <div class='span3'>
+                    <p class='p-heading image-Margin-Pull'>
+                      <strong>Category</strong>
+                    </p>
+                    <img alt='Image of category B vehicle' class='entitlement-icon image-Middle-Align' src='/public/images/categories/B.png'>
+                      <span>
+                        <strong>B</strong>
+                      </span>
+                  <div>
+                  <strong>Valid From</strong>:
+                  <span>20-02-08</span>
+                </div>
+                <div>
+                  <strong>Valid To</strong>:
+                  <span>20-02-18</span>
+                </div>
+              </div>
+              <div class='span4'>
+                <p>
+                  <strong>Description</strong>
+                </p>
+                <span>You can drive vehicles up to 3,500kg Maximum Authorised Mass (MAM) and up to 8 passenger seats with trailer up to 750kg; trailers of 750kg if combined weight of vehicle and trailer isn’t over 3,500kg and the fully-loaded trailer doesn’t weigh more than the unladen vehicle</span>
+              </div>
+              <div class='span4'>
+                <p>
+                   <strong>Restriction Codes</strong>
+                </p>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <button class='btn' id='feMoreButton' style='display: none;'>More</button>
+        <button class='btn' id='feLessButton' style='display: none;'>Less</button>
+
+        <div class='row-fluid'>
+            <div class='span12'>
+                <h2 class='h2'>
+                    Provisional Entitlements
+                </h2>
+                <div class='accordion prov-Entitlements' data-minimum-div-shown='3' id='pe_accordion'>
+                    <div class='accordion-group'>
+                        <div class='accordion-heading'>
+                            <a class='accordion-toggle collapsed' data-='' data-parent='#pe_accordion' data-toggle='collapse' href='#collapse_pe_0'>
+                                <span class='col'>Category : A</span>
+                                <span class='col'>Valid From : 20-02-08</span>
+                                <span class='col'>Valid To : 20-02-18</span>
+                                <span class='col pull-right expando'></span>
+                            </a>
+                        </div>
+                        <div class='accordion-body collapse' id='collapse_pe_0'>
+                            <div class='accordion-inner'>
+                                <div class='row-fluid'>
+                                    <div class='span3'>
+                                        <p class='p-heading image-Margin-Pull'>
+                                            <strong>Category</strong>
+                                        </p>
+                                        <img alt='Image of category A vehicle' class='entitlement-icon image-Middle-Align' src='/public/images/categories/A.png'>
+                                    <span>
+                                      <strong>A</strong>
+                                    </span>
+                                        <div><strong>Valid From</strong>:
+                                            <span>20-02-08</span>
+                                        </div>
+                                        <div><strong>Valid To</strong>:
+                                            <span>20-02-18</span>
+                                        </div>
+                                    </div>
+                                    <div class='span4'>
+                                        <p>
+                                            <strong>Description</strong>
+                                        </p>
+                                        <span>You can drive motorbikes up to 25kW power output and power weight ratio up to 0.16kW/kg; motorbikes with sidecar and power weight ratio up to 0.16kW/kg; any size motorbike, with or without a sidecar if you’ve completed the large motorbike direct access scheme</span>
+                                    </div>
+                                    <div class='span3'>
+                                        <p>
+                                            <strong>Restriction Codes</strong>
+                                        </p>
+                                        <span></span>
+                                    </div>
+                                    <div class='span2'>
+                                        <p>
+                                            <strong>Unclaimed Test Pass</strong>
+                                        </p>
+                                        <span>No</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class='btn' id='peMoreButton' style='display: none;'>More</button>
+        <button class='btn' id='peLessButton' style='display: none;'>Less</button>
+        </div>
+          <div class='tab-pane' id='Endorsements'>
+              <h2 class='h2'>Penalty points and disqualifications</h2>
+              <div class='row-fluid'>
+                  <div class='span12'>
+                      <h2 class='h2'>
+                          Disqualifications
+                      </h2>
+                      <div class='accordion disq-record' data-minimum-div-shown='3' id='dq_accordion'>
+                          <div class='accordion-group'>
+                              <div class='accordion-heading'>
+                                  <a class='accordion-toggle collapsed' data-parent='#dq_accordion' data-toggle='collapse' href='#collapse_dq_0'>
+                                      <span class='col'>
+                                        <strong>DR61</strong>
+                                      </span>
+                                      <span class='col'>Period: 12 months</span>
+                                      <span class='col'>Fine: £250.00</span>
+                                      <span class='col'>Offence Date: 27-05-02</span>
+                                      <span class='col pull-right expando'></span>
+                                  </a>
+                              </div>
+                              <div class='accordion-body collapse' id='collapse_dq_0'>
+                                  <div class='accordion-inner'>
+                                      <div class='row-fluid'>
+                                          <div class='span3'>
+                                              <p class='p-heading'>
+                                                  <strong>Dates</strong>
+                                              </p>
+                                              <div><em>Offence Date</em>: 27-05-02
+                                              </div>
+                                              <div><em>Expiry Date</em>: 14-06-12
+                                              </div>
+                                              <div><em>Conviction Date</em>: 14-06-02
+                                              </div>
+                                              <div><em>Sentencing Date</em>: 25-06-02
+                                              </div>
+                                          </div>
+                                          <div class='span3'>
+                                              <p class='p-heading'>
+                                                  <strong>Offence Details</strong>
+                                              </p>
+                                              <div><em>DR61</em>: Refusing to give permission for analysis of a blood sample when that sample was taken without consent due to incapacity in circumstances other than driving or attempting to drive
+                                              </div>
+                                              <div><em>Fine</em>: £250.00
+                                              </div>
+                                              <div><em>Number Of Points</em>: 6
+                                              </div>
+                                              <div><em>Period</em>: 12 months
+                                              </div>
+                                          </div>
+                                          <div class='span3'>
+                                              <p class='p-heading'>
+                                                  <strong>Convicting Court</strong>
+                                              </p>
+                                              <div>
+                                            <span>
+                                              <strong>9001</strong>
+                                              : Antrim Magistrates' Court
+                                            </span>
+                                              </div>
+                                          </div>
+                                          <div class='span3'>
+                                              <p class='p-heading'>
+                                                  <strong>Other</strong>
+                                              </p>
+                                          </div>
+                                      </div>
+                                      <p class='footnote'>This offence can be removed from your licence on 14-06-13</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class='accordion-group'>
+                              <div class='accordion-heading'>
+                                  <a class='accordion-toggle collapsed' data-parent='#dq_accordion' data-toggle='collapse' href='#collapse_dq_1'>
+                                      <span class='col'>
+                                        <strong>DR31</strong>
+                                      </span>
+                                      <span class='col'>Period: 12 months</span>
+                                      <span class='col'>Fine: £250.00</span>
+                                      <span class='col'>Offence Date: 31-05-10</span>
+                                      <span class='col pull-right expando'></span>
+                                  </a>
+                              </div>
+                              <div class='accordion-body collapse' id='collapse_dq_1'>
+                                  <div class='accordion-inner'>
+                                      <div class='row-fluid'>
+                                          <div class='span3'>
+                                              <p class='p-heading'>
+                                                  <strong>Dates</strong>
+                                              </p>
+                                              <div><em>Offence Date</em>: 31-05-10
+                                              </div>
+                                              <div><em>Expiry Date</em>: 18-06-20
+                                              </div>
+                                              <div><em>Conviction Date</em>: 18-06-10
+                                              </div>
+                                              <div><em>Sentencing Date</em>: 02-07-10
+                                              </div>
+                                          </div>
+                                          <div class='span3'>
+                                              <p class='p-heading'>
+                                                  <strong>Offence Details</strong>
+                                              </p>
+                                              <div><em>DR31</em>: Driving or attempting to drive then refusing to give permission for analysis of  a blood sample  when that sample was taken without consent due to incapacity
+                                              </div>
+                                              <div><em>Fine</em>: £250.00
+                                              </div>
+                                              <div><em>Number Of Points</em>: 6
+                                              </div>
+                                              <div><em>Period</em>: 12 months
+                                              </div>
+                                          </div>
+                                          <div class='span3'>
+                                              <p class='p-heading'>
+                                                  <strong>Convicting Court</strong>
+                                              </p>
+                                              <div>
+                                            <span>
+                                              <strong>9007</strong>
+                                              : Belfast and Newtownabbey Magistrates' Court
+                                            </span>
+                                              </div>
+                                          </div>
+                                          <div class='span3'>
+                                              <p class='p-heading'>
+                                                  <strong>Other</strong>
+                                              </p>
+                                          </div>
+                                      </div>
+                                      <p class='footnote'>This offence can be removed from your licence on 18-06-21</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            <button class='btn' id='dqMoreButton' style='display: none;'>More</button>
+            <button class='btn' id='dqLessButton' style='display: none;'>Less</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

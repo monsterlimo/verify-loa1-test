@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Renew or update your driving licence{% endblock %}
+
+{% block page_content %}
+
+<div class="article-container">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <header class="page-header">
+        <h1 class="heading-large">How would you like to access your personal tax account?</h1>
+      </header>
+<!--       <p class="lede">You can sign in to {{serviceNameLower}} using the following methods:</p>
+ -->    </div>
+    
+
+<article>
+
+    <div class="column-two-thirds">  
+
+      <h2 class="heading-medium">Sign in with GOV.UK Verify</h2>
+      <p>You’ll be sent to GOV.UK Verify to sign in. If you haven’t used GOV.UK Verify before, it will take you about 15 minutes to get set up. You’ll then be able to use it with other government services.</p>
+    </div>
+  </div>
+  
+  <div class="grid-row">  
+    <div class="column-one-third">
+       <a class="button" href="/intro{{formQuery}}">
+         Use GOV.UK Verify
+       </a>
+    </div>
+    <div class="column-one-third">
+      <a href="/intro?requestId={{ requestId }}">
+        <img class="sign-in-logo" src="/public/images/govuk-verify-small-black-text.png" alt="">
+      </a>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">  
+      <h2 class="heading-medium">Sign in with your European eID</h2>
+      <p>If you have a European eID you can use that to sign in. Including identity cards, mobile IDs and banking IDs.</p>
+    </div>      
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="button" href="/select-country{{formQuery}}">
+        Use your European eID
+      </a>
+
+      <details>
+
+        <summary><span class="summary">Why can I use European eID's?</span></summary>
+
+        <div class="panel panel-border-narrow">
+          <p>
+            The eIDAS Regulation is a new law that allows you to use your European electronic identity to access online public services in the UK. This will only apply to European countries that have asked the UK to accept their identities.
+          </p>
+        </div>
+
+      </details>
+    </div>
+  </div>
+
+  {% if serviceOtherWays != "" %}
+  
+    <h3 class="heading-small"><a href="/other-ways?requestId={{ requestId }}">Other ways to {{ serviceNameLower }}</a></h3>
+
+    {{serviceOtherWays}}
+  
+  {% endif %}
+
+
+</article>
+</div>
+
+{% endblock %}

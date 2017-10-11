@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Can I be verified? - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-xlarge">GOV.UK Verify won’t work for you</h1>
+
+    <p>You need a phone or tablet to use GOV.UK Verify. If you don’t have either of these, there are other ways you can {{ serviceNameLower }}.</p>
+
+    <p>If you don’t have a passport or UK driving licence, you will also need to install an app.</p>
+
+    <h2 class="heading-medium">Other ways to {{ serviceNameLower }}</h2>
+    <div class="other-ways-to-complete-transaction">
+      {{ serviceOtherWays | safe }}
+    </div>
+  </div>
+</div>
+{% endblock %}

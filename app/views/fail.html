@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block page_title %}{{ idpName }} were unable to verify your identity{% endblock %}
+
+{% block page_content %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">{{ idp.name }} was unable to verify your identity to the level required</h1>
+    
+    <h2 class="heading-medium">You can still access {{serviceProvider}} services</h2>
+
+<!--     <h2 class="heading-medium">Other ways to report a medical condition that affects your driving</h2>
+ -->
+
+    {{serviceOtherWays | safe}}
+
+    <h2 class="heading-medium">What to do next</h2 class="heading-medium">
+
+    <p>You can try the following:</p>
+
+    <ul class="list list-bullet">
+      <li><a href="#">try again with Experian</a></li>
+      <li><a href="/about-choosing-a-company?requestId={{ requestId }}&selection=true&above_age_threshold=true&resident_last_12_months=true&userLOA=0">try verifying with another certified company</a></li>
+      <li>Contact {{ idp.name }} for more information</li>
+        <div class="panel panel-border-wide"">
+
+          <p>identityservicesupport@{{idp.slug}}.com</p>
+          <p>Telephone: 0800 052 1051<br/>Monday to Friday, 8am to 7pm<br/>Saturday, 8am to 4pm
+          <br/>
+          <a href="https://www.gov.uk/call-charges">Find out about call charges</a>
+        </p>
+
+      </div>
+    </ul>
+
+{% if prereg == 'true' %}
+    <h2 class="heading-medium">Your Experian identity account</h2>
+
+    <p>You can still use your Experian identity account to access these government services:</p>
+
+    <ul class="list list-bullet">
+      <li>view or share your driving licence information</li>
+      <li>complete your claim or access your Universal Credit account</li>
+      <li>sign your mortgage deed</li>
+      <li>make a money claim online</li>
+      <li>apply for child maintenance</li>
+      <li>use Rural Payments</li>
+    </ul>
+
+
+    <p>Experian was unable to verify your identity to the higher level, there are a few reasons why this might happen, including:</p>
+
+    <ul class="list list-bullet">
+      <li>your answer to a question doesn't match records</li>
+      <li>you've recently had a change in your circumstances, and they are not updated online</li>
+      <li>Experian does not have access to enough information about you</li>
+    </ul>
+{% endif %}
+
+  </div>
+</div>
+
+{% endblock %}

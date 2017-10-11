@@ -1,0 +1,118 @@
+{% extends "layout_start_page.html" %}
+
+{% block page_title %}Register for and file your Self Assessment tax return{% endblock %}
+
+{% block page_content %}
+
+<div class="article-container">
+
+  <header class="page-header">
+    <h1 class="heading-xlarge">Register for and file your Self Assessment tax return</h1>
+  </header>
+
+  <div class="grid-row">
+    <nav class="page-navigation">
+      <ol>
+        <li class="active">
+          <span class="part-number">1.</span>
+          <span>If you're already registered</span>
+        </li>
+        <li>
+          <span class="part-number">2.</span>
+          <a href="/self-assessment/start-self-assessment-2?requestId=self-assessment">Register if you're not self-employed</a>
+        </li>
+        <li>
+          <span class="part-number">3.</span>
+          <a href="/self-assessment/start-self-assessment-3?requestId=self-assessment">Register if you're self-employed</a>
+        </li>
+      </ol>
+      <ol start="4">
+        <li>
+            <span class="part-number">4.</span>
+            <a href="/self-assessment/start-self-assessment-4?requestId=self-assessment">Register if you're a partner or partnership</a>
+        </li>
+      </ol>
+    </nav>
+
+  </div>
+
+  </div>
+
+  <article>
+    <h2 class="heading-medium">1. If you're already registered</h2>
+
+    <p>
+      Use this service to:
+    </p>
+
+    <ul class="list list-bullet">
+      <li>fill in and send your tax return to HM Revenue and Customs (HMRC)</li>
+      <li>go back to a tax return you’ve already started</li>
+      <li>check your details, view returns and print your tax calculation</li>
+    </ul>
+    
+    <div class="">
+      <div class="">
+        <a class="button button-start" href="https://www.tax.service.gov.uk/gg/sign-in?continue=/business-account/self-assessment">
+          <strong>Sign in</strong>
+        </a>
+      </div>
+    </div>
+
+    <h2 class="heading-medium">Before you start</h2>
+    <h3 class="heading-small">Government Gateway</h3>
+    <p>If you use the sign in button, you’ll need a Government Gateway account. You’ll already have one if you’ve used HMRC online services before.</p>
+    <p>If you don’t have one, you can <a href="#">create an account and enrol</a> for the Self Assessment online service.</p>
+
+    <h3 class="heading-small">GOV.UK Verify</h3>
+    <p>You can also <a href="/intro{{formQuery}}&requestId=self-assessment">sign in using GOV.UK Verify</a>. If you haven’t used GOV.UK Verify before, it takes about 10 minutes to sign up. You’ll then be able to use it with other government services.</p>
+
+    <h2 class="heading-medium">If you’re not registered</h2>
+    
+    <p>There are different ways to register if you’re:</p>
+    <ul class="list list-bullet">
+      <li><a href="#">not self-employed</a></li>
+      <li><a href="#">self-employed or a sole trader</a></li>
+      <li><a href="#">registering a partner or partnership</a></li>
+    </ul>
+
+    <div class="panel panel-border-wide">
+      <p>
+        You should allow enough time to complete the registration process so you can send your return by the <a href="#">deadline</a>.
+      </p>
+    </div>
+
+    <h2 class="heading-medium">When you can’t use the service</h2> 
+
+    <p>You need to <a href="#">buy other software</a> or <a href="#">download other forms</a> to send a Self Assessment tax return:</p>
+    <ul class="list list-bullet">
+      <li>for a partnership</li>
+      <li>for a trust or estate</li>
+      <li>if you <a href="#">lived abroad as a non-resident</a></li>
+      <li>if you get income from a trust, you’re a Lloyd’s underwriter or a religious minister</li>
+    </ul>
+
+    <div class="panel panel-border-wide">
+      <p>
+        This page is also available <a href="#">in Welsh (Cymraeg)</a>.
+      </p>
+    </div>
+
+    </article>
+  </div>  
+  <div class="column-third sidebar-related-links">
+    <div class="sidebar-navigation-heading"></div>
+    <h2 class="heading-medium">Self Assessment</h2>
+    <ul class='list list-bullet'>
+      <li><a href="#">Pay your Self Assessment tax bill</a></li>
+      <li><a href="#">Self Assessment tax returns</a></li>
+      <li><a href="#">Self Assessment forms and helpsheets</a></li>
+      <li><a href="#">Get help with tax</a></li>
+      <li><a href="#">More</a></li>
+    </ul>
+  </div>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block page_title %}About choosing a company - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">Finding the right company to verify you</h1>
+
+    <p>Certified companies have built new, secure systems to verify identities. These systems work by checking:
+		</p>
+		<ul class="list list-bullet">
+			<li>your identity documents are valid </li>
+			<li>it’s you providing your details, and not someone pretending to be you</li>
+		</ul>
+    <p>However, each company uses different methods for each of these steps.</p>
+    <p>So we’ll now ask you some questions to check which companies can verify you. We’ll then send you to the website of the company you choose.</p>
+  </div>
+</div>
+
+<div class="actions">
+  <a class="button" id="next-button" href="/about-you{{ formQuery | safe }}">Continue</a>
+</div>
+
+{% endblock %}

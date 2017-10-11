@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block page_title %}{{ query.idp[1] }}  were unable to verify your identity{% endblock %}
+
+{% block page_content %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">You cancelled verifying your identity with {{ query.idp[1] }} </h1>
+
+      <p>What do you want to do next?</p>
+
+      <ul class='list list-bullet'>
+        <li><a href="">Find out the other ways to {{serviceNameLower}}</a></li>
+        <li><a href="">Verify with another certified company</a></li>
+        <li><a href="">Verify using different documents</a></li>
+        <li><a href="">Contact {{ query.idp[1] }} </a></li>
+      </ul>
+  </div>
+</div>
+
+{% endblock %}

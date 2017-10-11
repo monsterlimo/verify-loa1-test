@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Select all the documents you have - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">Select all the documents you have</h1>
+
+    <p>Certified companies use information from different identity documents to verify you.</p>
+
+    <form id="validate-documents" class="select-documents-form" novalidate="novalidate" data-msg="Please select the documents you have" action="/select-phone" accept-charset="UTF-8" method="get">
+
+      {{ formData | safe }}
+
+      <div class="form-group">
+        <fieldset>
+          <legend>Do you have these documents with you?</legend>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <span>1. UK photocard driving licence</span>
+              <label class="block-label" for="select_documents_form_driving_licence_true">
+                <input type="radio" value="true" name="driving_licence" id="select_documents_form_driving_licence_true">
+                 Yes
+               </label>
+
+              <label class="block-label" for="select_documents_form_driving_licence_false">
+                <input type="radio" value="false" name="driving_licence" id="select_documents_form_driving_licence_false">
+                <span class="translation_missing" title="translation missing: en.option.no">No</span>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <span>2. UK passport</span>
+
+              <label class="block-label" for="select_documents_form_passport_true">
+                <input type="radio" value="true" name="passport" id="select_documents_form_passport_true">
+                Yes
+              </label>
+
+              <label class="block-label" for="select_documents_form_passport_false">
+                <input type="radio" value="false" name="passport" id="select_documents_form_passport_false">
+                <span class="translation_missing" title="translation missing: en.option.no">No</span>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <span>3. Identity document from another country (passport, ID card or driving licence)</span>
+              <label class="block-label" for="select_documents_form_non_uk_id_document_true">
+                <input type="radio" value="true" name="non_uk_passport" id="select_documents_form_non_uk_id_document_true">
+                Yes
+              </label>
+
+              <label class="block-label" for="select_documents_form_non_uk_id_document_false">
+                <input type="radio" value="false" name="non_uk_passport" id="select_documents_form_non_uk_id_document_false">
+                <span class="translation_missing" title="translation missing: en.option.no">No</span>
+              </label>
+            </fieldset>
+          </div>
+          
+          <div class="form-group">
+            <fieldset class="inline">
+              <span>4. UK bank account</span>
+              <label class="block-label" for="select_documents_form_bank_account_true">
+                <input type="radio" value="true" name="bank_account" id="select_documents_form_bank_account_true">
+                Yes
+              </label>
+
+              <label class="block-label" for="select_documents_form_bank_account_false">
+                <input type="radio" value="false" name="bank_account" id="select_documents_form_bank_account_false">
+                <span class="translation_missing" title="translation missing: en.option.no">No</span>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <fieldset class="inline">
+              <span>5. Debit or credit card</span>
+              <label class="block-label" for="select_documents_form_credit_card_true">
+                <input type="radio" value="true" name="credit_card" id="select_documents_form_credit_card_true">
+                Yes
+              </label>
+
+              <label class="block-label" for="select_documents_form_credit_card_false">
+                <input type="radio" value="false" name="credit_card" id="select_documents_form_credit_card_false">
+                <span class="translation_missing" title="translation missing: en.option.no">No</span>
+              </label>
+            </fieldset>
+          </div>
+
+          <label class="block-label" for="select_documents_form_no_documents">
+            <input name="documents[no_documents]" type="hidden" value="false">
+
+            <input class="js-no-docs" type="checkbox" value="true" name="no_documents" id="select_documents_form_no_documents">
+            I don’t have any of these documents with me
+          </label>
+        </fieldset>
+      </div>
+
+      <div id="validation-error-message-js"></div>
+
+      <div class="actions">
+        <input type="submit" value="Continue" class="button" id="next-button">
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,111 @@
+{% extends "layout_start_page.html" %}
+
+{% block page_title %}Register for and file your Self Assessment tax return{% endblock %}
+
+{% block page_content %}
+
+<div class="article-container">
+
+  <header class="page-header">
+    <h1 class="heading-xlarge">Register for and file your Self Assessment tax return</h1>
+  </header>
+
+  <div class="grid-row">
+    <nav class="page-navigation">
+      <ol>
+        <li class="active">
+          <span class="part-number">1.</span>
+          <span>If you're already registered</span>
+        </li>
+        <li>
+          <span class="part-number">2.</span>
+          <a href="#">Register if you're not self-employed</a>
+        </li>
+        <li>
+          <span class="part-number">3.</span>
+          <a href="#">Register if you're self-employed</a>
+        </li>
+      </ol>
+      <ol start="4">
+        <li>
+            <span class="part-number">4.</span>
+            <a href="#">Register if you're a partner or partnership</a>
+        </li>
+      </ol>
+    </nav>
+
+  </div>
+
+  </div>
+
+  <article>
+    <h2 class="heading-medium">1. If you're already registered</h2>
+
+    <p>
+      Use this service to:
+    </p>
+
+    <ul class="list list-bullet">
+      <li>fill in and send your tax return to HM Revenue and Customs (HMRC)</li>
+      <li>go back to a tax return you’ve already started</li>
+      <li>check your details, view returns and print your tax calculation</li>
+    </ul>
+    
+    <div class="">
+      <div class="">
+        <a class="button button-start" href="/government-gateway{{formQuery}}">
+          <strong>Sign in with Government Gateway</strong>
+        </a>
+        <p>If you don’t have a Government Gateway account, you can <a href="/government-gateway">create an account and add the online service</a> (known as ‘enrolling’).</p>
+      </div>
+    </div>
+
+    <h2 class="heading-medium">Sign in with GOV.UK Verify</h2>
+    <!-- <h2 class="heading-medium">Before you start</h2> -->
+    
+    <!-- <h3 class="heading-small">Government Gateway</h3>
+
+    <p>If you use the sign in button, you’ll need a Government Gateway account. You’ll already have one if you’ve used HMRC online services before.</p>
+ -->
+<!-- 
+    <h3 class="heading-small">GOV.UK Verify</h3>
+ -->
+    <p>You can also <a href="/intro{{formQuery}}&requestId=self-assessment">sign in using GOV.UK Verify</a>. If you haven’t used GOV.UK Verify before, it takes about 10 minutes to sign up. You’ll then be able to use it with other government services.</p>
+
+    <a href="/intro{{formQuery}}&requestId=self-assessment"><img src="/public/images/govuk-verify-small-black-text.png" alt="Sign in using GOV.UK Verify"></a>
+
+    <h2 class="heading-medium">If you’re not registered</h2>
+    
+    <p>There are different ways to register if you’re:</p>
+    <ul class="list list-bullet">
+      <li><a href="#">not self-employed</a></li>
+      <li><a href="#">self-employed or a sole trader</a></li>
+      <li><a href="#">registering a partner or partnership</a></li>
+    </ul>
+
+    <div class="panel panel-border-wide">
+      <p>
+        You should allow enough time to complete the registration process so you can send your return by the <a href="#">deadline</a>.
+      </p>
+    </div>
+
+    <h2 class="heading-medium">When you can’t use the service</h2> 
+
+    <p>You need to <a href="#">buy other software</a> or <a href="#">download other forms</a> to send a Self Assessment tax return:</p>
+    <ul class="list list-bullet">
+      <li>for a partnership</li>
+      <li>for a trust or estate</li>
+      <li>if you <a href="#">lived abroad as a non-resident</a></li>
+      <li>if you get income from a trust, you’re a Lloyd’s underwriter or a religious minister</li>
+    </ul>
+
+    <div class="panel panel-border-wide">
+      <p>
+        This page is also available <a href="#">in Welsh (Cymraeg)</a>.
+      </p>
+    </div>
+
+  </article>
+</div>
+
+{% endblock %}

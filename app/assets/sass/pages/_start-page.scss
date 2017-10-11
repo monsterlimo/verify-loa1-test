@@ -1,0 +1,41 @@
+.sign-in-wrap{
+  margin: 20px 0 20px 0;
+
+  .button-wrap{
+    display: inline-block;
+    min-width: 240px;
+    margin: 0 10px 0 0;
+    strong{
+      display: block;
+    }
+  }
+
+  .button{
+    display: block;
+  }
+
+  .provider-logos-wrap{
+    display: none;
+    padding-top: 20px;
+  }
+}
+
+.verify-heading{
+  @extend %contain-floats;
+
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 26px;
+
+  strong{
+    letter-spacing: -0.03em;
+  }
+
+  .verify-logo{
+    height: 60px;
+    margin-right: 10px;
+    vertical-align: -2px;
+    float: left;
+  }
+}
+

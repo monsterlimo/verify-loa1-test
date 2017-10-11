@@ -1,0 +1,174 @@
+{% extends "layout_start_page.html" %}
+
+{% block page_title %}Renew or update your driving licence{% endblock %}
+
+{% block page_content %}
+
+<div class="article-container">
+
+  <header class="page-header">
+    <h1 class="heading-xlarge">Renew or update your driving licence</h1>
+  </header>
+
+  <article>
+
+    <p>Price: £20</p>
+
+    <p>Cards accepted: MasterCard, Visa, Electron, Maestro or Delta, debit or credit.</p>
+
+    <p>
+      You must be a resident of Great Britain - there’s a different service in
+      <a rel="external" href="http://www.nidirect.gov.uk/index/information-and-services/motoring/driver-licensing/need-a-new-or-updated-licence/renewing-your-driving-licence.htm">Northern Ireland</a>.
+    </p>
+
+    <p>You mustn't be disqualified from driving.</p>
+
+    <div class="panel panel-indent">
+      <h2 class="verify-heading">
+        <img src="/public/images/govuk-verify.png" class="verify-logo"><strong>GOV.UK</strong><br>Verify
+      </h2>
+
+      <p>This service uses GOV.UK Verify to check your identity.</p>
+    </div>
+    
+    {% if query.eidas == 'true' %}
+
+    <div class="sign-in-wrap">
+      <div class="button-wrap">
+        <a class="button button-start" href="/select-signin{{formQuery}}&requestId=view-share-driving-licence">
+          <strong>Start now (interstitial)</strong>
+        </a>
+      </div>
+    </div>
+
+    {% else %}
+
+    <div class="sign-in-wrap">
+      <div class="button-wrap">
+        <a class="button button-start" href="/intro{{formQuery}}&requestId=view-share-driving-licence">
+          <strong>Start now</strong>
+        </a>
+      </div>
+    </div>
+
+    {% endif %}
+
+     <h2 id="before-you-start" class="heading-medium">Before you start</h2>
+
+      <div class="notice">
+        <i class="icon icon-important">
+          <span class="visuallyhidden">Warning</span>
+        </i>
+        <p><strong class="bold-small">
+          You can’t apply online if your name or title has changed or if you have a 5-year bus or lorry licence.
+        </strong>
+      </p>
+      </div>
+
+      <p>You must renew a photocard licence every 10 years - you’ll receive a reminder before your current licence ends.</p>
+
+      <p>There’s a different service if you want to <a href="https://www.gov.uk/renew-driving-licence-at-70">renew your licence and you’re 70 or over</a>.</p>
+
+      <h3 class="heading-small">What you need</h3>
+
+      <p>To renew online you need:</p>
+
+      <ul class="list-bullet">
+        <li>a valid UK passport</li>
+        <li>to be a resident of Great Britain - there’s a different service in <a href="http://www.nidirect.gov.uk/index/information-and-services/motoring/driver-licensing/need-a-new-or-updated-licence/renewing-your-driving-licence.htm">Northern Ireland</a></li>
+        <li>to pay £14 by MasterCard, Visa, Electron, Maestro or Delta debit or credit card (there’s no fee if you’re </li>
+        <li>over 70 or have a medical short period licence)</li>
+        <li>addresses of where you’ve lived over the last 3 years</li>
+        <li>your current driving licence (if you don’t have your licence you must say why in your application)</li>
+        <li>your National Insurance number</li>
+        <li>to not be disqualified from driving</li>
+      </ul>
+
+      <h3 class="heading-small">How long it takes</h3>
+
+      <p>Your driving licence should arrive within a week if you apply online.</p>
+      <div class="panel panel-border-narrow ">
+            <p>You must send your old photocard licence to DVLA when you get your new licence. You’ll be told the address to use when you finish the application.</p>
+      </div>
+      <p>Your new licence will be valid from the date your application is approved, not from the expiry date of your current licence.</p>
+
+      <h3 class="heading-small">Personal data</h3>
+
+      <p>If you apply online you are agreeing that DVLA can check your personal data, including your National Insurance number.</p>
+
+      <p>DVLA will confirm your details with the Department for Work and Pensions (DWP) and HM Revenue and Customs (HMRC).</p>
+
+      <p>DVLA will send you a confirmation email once you’ve applied. You might be asked to take part in research by email, but you can opt out.</p>
+
+      
+
+      <h2 id="other-ways-to-apply" class="heading-medium">Other ways to apply</h2>
+
+      <h3 class='heading-small'>Applying at a Post Office</h3>
+
+      <p>You’ll be sent a renewal form (D798) in the post. This has a list of the closest Post Offices where you can renew your driving licence.</p>
+
+      <p>You can also find your nearest suitable Post Office using the <a href"http://www.postoffice.co.uk/branch-finder">Post Office branch finder</a> or you can call them.</p>
+
+      <p><strong>The Post Office</strong></p>
+      <p>Telephone: 0345 722 3344</p>
+      <p><a href="https://www.gov.uk/call-charges">Find out about call charges</a></p>
+
+      <div class="notice">
+        <i class="icon icon-important">
+          <span class="visuallyhidden">Warning</span>
+        </i>
+        <p>
+          <strong class="bold-small">
+            You can’t apply at the Post Office if your name has changed. You’ll need to apply by post.
+          </strong>
+        </p>
+      </div>
+
+
+
+      <p>You need to take:</p>
+      <ul class="list-bullet">
+        <li>the completed renewal form D798</li>
+        <li>your photocard licence if you have it</li>
+        <li>the fee of £17</li>
+      </ul>
+        
+      <div class="panel panel-border-narrow ">      
+        <p>The Post Office will charge an extra £4.50 fee to process your application.</p>
+      </div>
+      <p>Your driving licence should arrive within 3 weeks. It might take longer if your medical or personal details need to be checked.</p>
+
+      <div class="panel panel-border-narrow ">      
+        <p>You can’t download a copy of form D798, but if you don’t get your renewal reminder you may still be able to renew your licence at selected Post Offices. You’ll need to have your current photocard licence.</p>
+      </div>
+
+      <h3 class='heading-small'>Applying by post</h3>
+
+      <p>You need to fill in renewal form D798 and include:</p>
+      <ul class="list-bullet">
+        <li>a new <a href="https://www.gov.uk/photos-for-passports">passport type photo</a> taken within the last month (don’t sign the back of the photo)</li>
+        <li>your current photocard licence (you need to tick the relevant box on the D798 form if you’ve lost it)</li>
+        <li>a cheque or postal order for £17, payable to DVLA (no fee is needed if you have a medical short period licence or you’re aged 70 or over)</li>
+      </ul>
+        <p>You also need to include <a href="https://www.gov.uk/driving-licence-application-identity-documents">identity documents</a> if you’ve changed your name.</p>
+      <p>Send the application to:    
+        <ul>
+          <li>DVLA </li>
+          <li>Swansea </li>
+          <li>SA99 1DH </li>
+        </ul>
+      </p>
+
+      <p><strong>If you don’t have the reminder form</strong></p>
+      <p>If you don’t have the D798 reminder and want to apply by post, fill in form D1 ‘Application for a driving licence’, available from the DVLA form ordering service and selected Post Offices.</p>
+
+      <p>Your driving licence should arrive within 3 weeks. It might take longer if your medical or personal details need to be checked.</p>
+
+
+  </div>
+
+  </article>
+</div>
+
+{% endblock %}

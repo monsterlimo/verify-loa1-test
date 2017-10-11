@@ -1,0 +1,82 @@
+{% extends "layout_start_page.html" %}
+
+{% block page_title %}Renew or update your driving licence{% endblock %}
+
+{% block page_content %}
+
+<div class="article-container">
+
+  <header class="page-header">
+    <h1 class="heading-xlarge">Renew your driving licence</h1>
+  </header>
+
+  <article>
+
+    <p>Renew your driving licence online with DVLA if you have a valid UK passport.</p>
+
+    <p>Blurb about Verify</p>
+
+
+    <div class="sign-in-wrap">
+      <div class="button-wrap">
+        <a class="button button-start" href="/intro{{formQuery}}&requestId=renew-driving-licence">
+          <strong>Start now</strong>
+        </a>
+      </div>
+    </div>
+
+
+      <h2 id="before-you-start" class="heading-medium">Before you start</h2>
+
+      <div class="notice">
+        <i class="icon icon-important">
+          <span class="visuallyhidden">Warning</span>
+        </i>
+        <p><strong class="bold-small">
+          You can’t apply online if your name or title has changed or if you have a 5-year bus or lorry licence.
+        </strong>
+      </p>
+      </div>
+
+      <p>You must renew a photocard licence every 10 years - you’ll receive a reminder before your current licence ends.</p>
+
+      <p>There’s a different service if you want to <a href="https://www.gov.uk/renew-driving-licence-at-70">renew your licence and you’re 70 or over</a>.</p>
+
+      <h3 class="heading-small">What you need</h3>
+
+      <p>To renew online you need:</p>
+
+      <ul class="list-bullet">
+        <li>a valid UK passport</li>
+        <li>to be a resident of Great Britain - there’s a different service in <a href="http://www.nidirect.gov.uk/index/information-and-services/motoring/driver-licensing/need-a-new-or-updated-licence/renewing-your-driving-licence.htm">Northern Ireland</a></li>
+        <li>to pay £14 by MasterCard, Visa, Electron, Maestro or Delta debit or credit card (there’s no fee if you’re </li>
+        <li>over 70 or have a medical short period licence)</li>
+        <li>addresses of where you’ve lived over the last 3 years</li>
+        <li>your current driving licence (if you don’t have your licence you must say why in your application)</li>
+        <li>your National Insurance number</li>
+        <li>to not be disqualified from driving</li>
+      </ul>
+
+      <h3 class="heading-small">How long it takes</h3>
+
+      <p>Your driving licence should arrive within a week if you apply online.</p>
+      <div class="panel panel-border-narrow ">
+            <p>You must send your old photocard licence to DVLA when you get your new licence. You’ll be told the address to use when you finish the application.</p>
+      </div>
+      <p>Your new licence will be valid from the date your application is approved, not from the expiry date of your current licence.</p>
+
+      <h3 class="heading-small">Personal data</h3>
+
+      <p>If you apply online you are agreeing that DVLA can check your personal data, including your National Insurance number.</p>
+
+      <p>DVLA will confirm your details with the Department for Work and Pensions (DWP) and HM Revenue and Customs (HMRC).</p>
+
+      <p>DVLA will send you a confirmation email once you’ve applied. You might be asked to take part in research by email, but you can opt out.</p>
+
+
+  </div>
+
+  </article>
+</div>
+
+{% endblock %}

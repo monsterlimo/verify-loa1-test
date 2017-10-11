@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Do you have a mobile phone or tablet? - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">Change the address on your driving licence</h1>
+
+<!--     <h3 class="heading-medium">Current address</h3>
+    <ul>
+      <li>1 MUMBLES CASTLE</li>
+      <li>SWANSEA</li>
+      <li>SA6 1HX</li>
+    </ul>
+    
+    <h3 class="heading-medium">New address</h3> -->
+
+    </br>
+    
+    <form id="update-address" class="update-address-form" novalidate="novalidate" data-msg="Please answer all the questions" action="/driving-licence-details{{ formQuery }}" accept-charset="UTF-8" method="get">
+
+      {{ formData | safe }}
+      
+      <div class="form-group">
+        <label class="form-label" for="building">Building and street</label>
+        <input class="form-control" id="building" name="building" type="text">
+        <input class="form-control" id="building" name="street" type="text" style="margin-top: 15px">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="town">Town or city</label>
+        <input class="form-control" id="town" name="town" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="county">County (optional)</label>
+        <input class="form-control" id="county" name="county" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="postcode">Postcode</label>
+        <input class="form-control" id="postcode" name="postcode" type="text" style="width: 150px">
+      </div>
+
+      
+      <div class="actions">
+        <input type="submit" value="Submit" class="button" id="next-button">
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Choose a certified company - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+<div class="content-inner">
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+      <h2 class="heading-large">Choose a certified company to verify your identity</h2>
+      <p class="lede ">You don’t have to be an existing customer with a company.</p> 
+      <p>
+      
+        They ask you to provide personal information and then check it's correct using the new, secure systems they built
+        {% if serviceLOA != '0' %}
+          , including checking your documents with
+          {% if query.passport == 'true' %}
+            HM Passport Office
+            {% if query.driving_licence == 'true' %}
+             and DVLA
+            {% endif %}
+          {% elif  query.driving_licence == 'true' %}
+            DVLA
+          {% endif %}
+        {% endif %}
+      .</p>
+      <p class="large-top">
+        {% if serviceLOA == 2 %}Based on your answers, {% endif %}{{ available_idps | length }}&nbsp;{{ "companies" if available_idps.length > 1 else "company" }} can verify you now:
+      </p>
+      <ul class="list list-bullet">
+        <li><a href="/why-companies">Why there’s a choice of companies</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div id="matching-idps">
+
+    {% for idp in available_idps %}
+    <div class="idp-choice">
+
+      <div class="company-logo">
+        <img alt="" src="/public/images/idp-logos/{{ idp.slug }}.png">
+
+        <p class="company-about">
+          <a href="/about-idp{{ formQuery | safe }}&amp;idp={{ idp.slug }}">About {{ idp.name }}</a>
+        </p>
+      </div>
+
+      <div class="idp-option">
+
+        <a href="/redirect-to-idp{{ formQuery | safe }}&amp;idp={{ idp.slug }}" class="button">Choose {{ idp.name }}</a>
+        <div class="phone-prefer-not">
+          {% if query.apps == 'preferNot' %}
+            {% if idp.name == 'Digidentity' %} You <strong>may</strong> have to download an app with {{idp.name}}.
+            {% elif idp.name == 'Post Office' %} You <strong>may</strong> have to download an app with {{idp.name}}.
+            {% elif idp.name == 'SecureIdentity' %} You <strong>will</strong> have to download an app with {{idp.name}}.
+            {% else %}
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+<!--   {% if unavailable_idps.length > 0 %}
+  <div id="non-matching-idps">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <p class="large-top">
+          We’ve filtered out {{ unavailable_idps | length }}&nbsp;{{ "companies" if unavailable_idps.length > 1 else "company" }}{% if serviceLOA == 2 %}, as they’re unlikely to be able to verify you based on your answers.{% endif %}
+        </p>
+      </div>
+    </div>
+
+    <details role="group">
+      <summary>
+        <span class="summary">{% if serviceLOA == 2 %}Companies that are unlikely to verify you{% else %}Other companies {% endif %} </span>
+      </summary>
+
+      <div class="panel panel-border-narrow">
+
+        {% for idp in unavailable_idps %}
+        <div class="idp-choice">
+          <div class="company-logo">
+            <img alt="" src="/public/images/idp-logos/{{ idp.slug }}.png">
+            <p class="company-about">
+              <a href="/about-idp{{ formQuery | safe }}&amp;idp={{ idp.slug }}">About {{ idp.name }}</a>
+            </p>
+          </div>
+
+          <div class="idp-option">
+            <a href="/redirect-to-idp{{ formQuery | safe }}&amp;idp={{ idp.slug }}" class="button">Choose {{ idp.name }}</a>
+          </div>
+
+        </div>
+        {% endfor %}
+
+      </div>
+    </details>
+  </div>
+  {% endif %} -->
+</div>
+{% endblock %}

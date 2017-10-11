@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Renew your passport{% endblock %}
+
+{% block page_content %}
+
+<script src="/public/javascripts/home.js"></script>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <header class="page-header intro-header">
+      <h1 class="heading-large">Renew your passport</h1>
+    </header>
+
+    <div class="article-container">
+
+      <article>
+
+        <h2 class="heading-medium">Your old passport</h2>
+
+        <p>Please enter the number of the passport you want to renew. You'll need to send it to us to be cancelled.</p>
+
+        <form action="" class="form">
+
+          <div class="form-group">
+            <label class="form-label">Passport number</label>
+            <input class="form-control" type="text">
+          </div>
+
+          <div class="actions">
+            <button class="button">Next</button>
+          </div>
+
+          <details>
+            <summary aria-controls="details-content-0" tabindex="0">
+              <span class="summary">My passport is lost or stolen</span>
+            </summary>
+
+          <div class="panel panel-indent" id="details-content-0" aria-expanded="false" >
+
+            <p>If you don't have your old passport you must <a href="#">report it lost or stolen</a>.</p>
+
+            <p>The Lost and Stolen Passport service will give you an LS reference number you can use to renew your passport.</p>
+
+            <p><a href="#">I've already reported my old passport lost or stolen</a></p>
+          </div>
+        </details>
+
+        </form>
+
+      </article>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

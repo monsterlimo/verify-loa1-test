@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Can I be verified? - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">About you</h1>
+
+    <form id="validate-will-it-work-for-me" class="will-it-work-for-me-form heading-banner-top-margin" novalidate="novalidate" data-msg="Please answer all the questions" action="/select-your-documents" accept-charset="UTF-8" method="get">
+
+      {{ formData | safe }}
+
+      <div class="form-group">
+        <fieldset class="inline">
+          <legend>Are you 20 or over?</legend>
+          <label class="block-label" for="will_it_work_for_me_form_above_age_threshold_true">
+            <input type="radio" value="true" name="above_age_threshold" id="will_it_work_for_me_form_above_age_threshold_true">
+            Yes
+          </label>
+
+          <label class="block-label" for="will_it_work_for_me_form_above_age_threshold_false">
+            <input type="radio" value="false" name="above_age_threshold" id="will_it_work_for_me_form_above_age_threshold_false">
+            No
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <fieldset class="inline">
+          <legend>Have you lived in the UK for the last 12 months?</legend>
+          <label class="block-label" for="will_it_work_for_me_form_resident_last_12_months_true">
+            <input type="radio" value="true" name="resident_last_12_months" id="will_it_work_for_me_form_resident_last_12_months_true">
+            Yes
+          </label>
+
+          <label class="block-label" for="will_it_work_for_me_form_resident_last_12_months_false">
+            <input type="radio" value="false" name="resident_last_12_months" id="will_it_work_for_me_form_resident_last_12_months_false">
+            No
+          </label>
+        </fieldset>
+      </div>
+
+      <div id="not_resident_reason" class="form-group panel panel-border-narrow js-hidden">
+        <fieldset class="inline">
+          <legend>Which of these applies to you?</legend>
+         
+          <label class="block-label" for="will_it_work_for_me_form_not_resident_reason_movedrecently">
+            <input type="radio" value="MovedRecently" name="not_resident_reason" id="will_it_work_for_me_form_not_resident_reason_movedrecently" aria-invalid="false">
+            I moved to the UK in the last 12 months
+          </label>
+
+          <label class="block-label" for="will_it_work_for_me_form_not_resident_reason_addressbutnotresident">
+            <input type="radio" value="AddressButNotResident" name="not_resident_reason" id="will_it_work_for_me_form_not_resident_reason_addressbutnotresident">
+            I have an address in the UK, but I don’t live there
+          </label>
+
+          <label class="block-label" for="will_it_work_for_me_form_not_resident_reason_noaddress">
+            <input type="radio" value="NoAddress" name="not_resident_reason" id="will_it_work_for_me_form_not_resident_reason_noaddress">
+            I don’t have a UK address
+          </label>
+        </fieldset>
+      </div>
+      <div id="validation-error-message-js"></div>
+
+      <div class="actions">
+        <input type="submit" value="Continue" class="button" id="next-button">
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

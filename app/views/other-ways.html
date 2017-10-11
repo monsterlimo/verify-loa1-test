@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Other ways to {{ serviceNameLower }}{% endblock %}
+
+{% block page_content %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">Other ways to {{ serviceNameLower }}</h1>
+
+     {{ serviceOtherWays | safe}}
+
+  </div>
+</div>
+
+{% endblock %}

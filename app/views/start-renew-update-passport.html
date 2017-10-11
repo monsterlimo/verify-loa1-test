@@ -1,0 +1,69 @@
+{% extends "layout_start_page.html" %}
+
+{% block page_title %}Renew or update your driving licence{% endblock %}
+
+{% block page_content %}
+
+<div class="article-container">
+  <header class="page-header">
+    <h1 class="heading-xlarge">Renew or update your UK passport</h1>
+  </header>
+
+  <article>
+
+    <h2 class="heading-medium">Before you start</h2>
+
+    <p>You can’t use this service if you’re travelling within the next 4 weeks.</p>
+
+    <details>
+      <summary>
+        <span class="summary">What will I need?</span>
+      </summary>
+
+      <div class="panel panel-indent">
+        <ul class="list list-bullet">
+          <li>If you're renewing your passport, have your passport number ready.</li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="panel panel-indent">
+      <h2 class="verify-heading">
+        <img src="/public/images/govuk-verify.png" class="verify-logo"><strong>GOV.UK</strong><br>Verify
+      </h2>
+
+      <p>This service uses GOV.UK Verify to check your identity.</p>
+    </div>
+
+    <div class="sign-in-wrap">
+
+      <div class="button-wrap">
+        <a class="button button-start" href="/intro{{formQuery}}&requestId=passport">
+          <strong>Start now</strong>
+        </a>
+      </div>
+      <h3 class="heading-small">Before you start</h3>
+
+      <p>You’ll need a debit or credit card to use this service.</p>
+
+      <p>It should take 6 weeks to get your first adult passport once your form has been received. For all other application types, it should take 3 weeks.</p>
+
+      <p>It can take longer if more information is needed or your application hasn’t been filled out correctly.</p>
+
+      <p>You should use a different service if you <a href="https://www.gov.uk/get-a-passport-urgently">need your passport urgently</a>.</p>
+
+      <div class="panel panel-border-narrow " id="details-content-0" aria-expanded="false" >
+        <p>Don’t book travel until you have a valid passport - doing so is at your own risk.</p>
+      </div>
+
+      <h3 class="heading-small">Other ways to apply</h3>
+
+      <p>You can pick up passport application forms from your <a href="http://www.postoffice.co.uk/branch-finder">local Post Office</a> and apply by post, or use the <a href="https://www.gov.uk/how-the-post-office-check-and-send-service-works">Post Office Check and Send service</a>.</p>
+
+
+
+    </div>
+  </article>
+</div>
+
+{% endblock %}

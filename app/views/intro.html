@@ -1,0 +1,35 @@
+{% extends "layout_slide.html" %}
+
+{% block body_classes %}hub-start{% endblock %}
+{% block page_title %}Start - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block slide_content %}
+<h1>Sign in with GOV.UK Verify</h1>
+
+<form id="start-page-form" class="js-validate" novalidate="novalidate" action="/about?userLOA=0" accept-charset="UTF-8" method="get">
+
+  {{ formData | safe }}
+
+  <div class="form-group">
+    <fieldset>
+      <label class="block-label" for="yes">
+        <input id="yes" type="radio" name="selection" value="true" required="" data-msg="Please select an option" aria-required="true">
+        This is my first time using Verify
+      </label>
+      <label class="block-label" for="no">
+        <input id="no" type="radio" name="selection" value="false" required="" data-msg="Please select an option" aria-required="true">
+        I’ve used Verify before
+      </label>
+    </fieldset>
+  </div>
+
+  <div id="validation-error-message-js"></div>
+
+  <div class="form-group-tight">
+    <div class="actions">
+      <input class="button" id="next-button" type="submit" value="Continue">
+    </div>
+  </div>
+</form>
+
+{% endblock %}

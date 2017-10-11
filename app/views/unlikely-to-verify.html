@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Why this might not work for me? - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-xlarge">You might not be able to have your identity verified</h1>
+
+    <p>To verify an identity, certified companies access credit records then ask you to confirm this information. Most young people and newcomers to the UK have a limited ‘credit history’, companies might not be able to check your identity in this way.</p>
+
+    <h2 class="heading-medium">What you’ll need on your credit record</h2>
+
+    <p>Your identity might be verified if you have 2 or more of the following:</p>
+
+    <ul class="list-bullet list">
+      <li>current account with a UK bank</li>
+      <li>credit card</li>
+      <li>personal loan</li>
+      <li>mortgage</li>
+      <li>gas or electricity bills</li>
+      <li>mobile phone contract</li>
+      <li>you’re registered to vote</li>
+    </ul>
+
+    <p>You’ll also need a UK passport or a UK driving licence.</p>
+
+    <p><a id="verify-identity-online" href="/choose-a-certified-company{{ formQuery | safe}}">I’d like to try to verify my identity online</a></p>
+
+    <h2 class="heading-medium">Sign in with a European digital identity</h2>
+
+    <p>If you have a digital identity with certain European countries you will be able to {{serviceNameLower}} with that.</p>
+
+    <a href="/select-country{{formQuery}}">Use a European digital identity</a>
+
+    {% if serviceOtherWays != "" %}
+
+    <h2 class="heading-medium">Other ways to {{ serviceNameLower }}</h2>
+    <div class="other-ways-to-complete-transaction">
+      {{ serviceOtherWays | safe }}
+    </div>
+
+    {% endif %}
+
+  </div>
+</div>
+{% endblock %}

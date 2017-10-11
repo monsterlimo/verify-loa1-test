@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Can I be verified? - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-xlarge">GOV.UK Verify won’t work for you</h1>
+
+    <p>You need at least one document to use GOV.UK Verify. If you don’t have any of them, there are other ways you can {{ serviceNameLower }}.</p>
+
+    <a href="javascript:history.back()">Try selecting different documents</a></p>
+
+    <h2 class="heading-medium">Other ways to {{ serviceNameLower }}</h2>
+    <div class="other-ways-to-complete-transaction">
+      {{ serviceOtherWays | safe }}
+    </div>
+  </div>
+</div>
+{% endblock %}

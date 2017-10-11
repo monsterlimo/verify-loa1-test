@@ -1,0 +1,52 @@
+{% extends "layout_start_page.html" %}
+
+{% block page_title %}Renew or update your driving licence{% endblock %}
+
+{% block page_content %}
+
+<div class="article-container">
+
+  <header class="page-header">
+    <h1 class="heading-xlarge">Check your State Pension</h1>
+  </header>
+
+  <article>
+
+    <p>
+      Use this service to find out how much State Pension you could get when you reach State Pension age.
+    </p>
+
+    <p>The amount is based on an estimate of what your National Insurance record could be when you reach State Pension age.</p>
+
+    <p>You’ll also get information about how to increase your State Pension, if you can.</p>
+
+    <p>You can only use this service if you’re under State Pension age.</p>
+
+    <p>You’ll be sent to GOV.UK Verify to sign in. If you haven’t used GOV.UK Verify before, it will take you about 15 minutes to get set up.</p>
+    
+    <div class="sign-in-wrap">
+      <div class="button-wrap">
+        <a class="button button-start" href="/intro{{formQuery}}&requestId=check-state-pension">
+          <strong>Start now</strong>
+        </a>
+      </div>
+    </div>
+
+    <h2 class="heading-medium">Other ways to apply</h2>
+    <h3 class="heading-small">By phone or post</h3>
+    <p>If you’ll <a href="#">reach your State Pension age</a> in more than 30 days, call the <a href="#">Future Pension Centre</a> and ask for a statement.</p>
+
+    <p>You can also fill in the <a href="#">BR19 application form</a> and send it in the post.</p>
+
+    <p>You’ll get your statement within 10 working days.</p>
+
+    <h3 class="heading-small">If you’re already getting your State Pension or have delayed claiming it</h3>
+    <p>To get information about your State Pension, contact the <a href="#">Pension Service</a> if you’re in the UK or the <a href="#">International Pension Centre</a> if you live abroad.</p>
+
+    <h3 class="heading-small">If you’ve worked and paid National Insurance in the Isle of Man</h3>
+    <p>Contact the <a href="#">Future Pension Centre</a> to get information about your State Pension.</p>
+
+  </article>
+</div>
+
+{% endblock %}

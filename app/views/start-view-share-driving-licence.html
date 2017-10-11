@@ -1,0 +1,64 @@
+{% extends "layout_start_page.html" %}
+
+{% block page_title %}Renew or update your driving licence{% endblock %}
+
+{% block page_content %}
+
+<div class="article-container">
+
+  <header class="page-header">
+    <h1 class="heading-xlarge">View or share your driving licence information</h1>
+  </header>
+
+  <article>
+
+ 
+    <p>You can use this service to:</p>
+
+    <ul class="list list-bullet">
+      <li>view your driving record, for example vehicles you can drive</li>
+      <li>check your penalty points or disqualifications</li>
+      <li>create a licence ‘check code’ to share your driving record with someone, for example a car hire company</li>
+    </ul>
+
+    <p>The ‘check code’ will be valid for 21 days.</p>
+
+    <p>You’ll need:</p>
+
+    <ul class="list list-bullet">
+      <li>your driving licence number</li>
+      <li>to sign in using GOV.UK Verify. If you haven’t used GOV.UK Verify before, it takes about 10 minutes to get set up. You’ll then be able to use it with other government services</li>
+    </ul>
+    
+    <p>This service is also available <a href='#'>in Welsh (Cymraeg)</a>.</p>
+
+
+      <div class="button-wrap">
+        <a class="button button-start" href="/intro{{formQuery}}&userLOA=0">
+          <strong>Start now</strong>
+        </a>
+      </div>
+
+
+
+    <h2 class="heading-medium">Before you start</h2>
+
+    <p>You can’t use this service:</p>
+
+    <ul class="list list-bullet">
+      <li>if your licence was issued outside of England, Wales or Scotland</li>
+      <li>to check the progress of a licence application</li>
+    </ul>
+
+    <p>It’s a criminal offence to obtain someone else’s personal information without their permission.</p>
+
+    <h2 class="heading-medium">Other ways to apply</h2>
+
+    {{ serviceOtherWays | safe}}
+    
+  </div>
+
+  </article>
+</div>
+
+{% endblock %}

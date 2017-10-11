@@ -1,0 +1,49 @@
+{% extends "layout_slide.html" %}
+
+{% block page_title %}About certified companies - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block slide_content %}
+  <h1>
+    {{ idp.name }} has verified your identity
+  </h1>
+  
+  <p>You can sign in to {{serviceNameLower}} whenever you see the GOV.UK Verify logo with your {{idp.name}} identity account username and password.</p>
+
+  <div class="actions">
+    <!-- FORCE 3rd CYCLE -->
+    <!-- <a class="button" href="third-cycle-matching{{formQuery}}">Continue</a> -->
+    
+    <!-- SKIP 3rd CYCLE -->    
+    <a class="button" href="/wait-for-match{{formQuery}}">Continue</a>
+  </div>
+
+  {% if serviceLOA != 2 %}
+
+  Some government services need you to add extra security to your identity account, but you only need to do this once.
+  </br>
+  </br>
+    <details role="group">
+      <summary role="button" aria-controls="details-content-0" aria-expanded="false">
+        <span class="summary">Government services requiring extra security</span>
+      </summary>
+      <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+        <ul class="list-bullet list">
+          <li>renew or update your UK passport</li>
+          <li>renew your driving licence</li>
+          <li>check your Income Tax for the current year</li>
+          <li>check your State Pension </li>
+          <li>tell DVLA about your medical condition</li>
+          <li>renew your medical driving licence</li>
+          <li>claim your redundancy payment and monies owed</li>
+          <li>sign in and file your Self Assessment tax return</li>
+          <li>sign in to your personal tax account</li>
+          <li>check or update your company car tax</li>
+          <li>update your rural payments details</li>
+          <li>help friends or family with their tax</li>
+        </ul>
+      </div>
+    </details>
+
+  {% endif %}
+
+{% endblock %}

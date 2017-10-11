@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Renew or update your driving licence{% endblock %}
+
+{% block page_content %}
+
+<div class="article-container column-two-thirds">
+
+  <header class="page-header">
+    <h1 class="heading-xlarge">Sign in with Government Gateway</h1>
+  </header>
+
+  <article>
+
+    <p>Enter your Government Gateway credentials to sign in. You received these when you created your HMRC online account.</p>
+
+    <form action="">
+    <p>
+      <label>User ID</label></br>
+      <input type="text">
+    </p>
+    <p>
+      <label>Password</label></br>
+      <input type="text">
+    </p>
+    </form>
+    
+    <a class="button medium" href="#">Sign in</a>
+
+    <h2 class="heading-medium">Problems signing in</h2>
+
+    <ul class="list list-bullet">
+      <li><a href="https://www.tax.service.gov.uk/government-gateway-registration-frontend/route?continue=%2Fpersonal-account%2Fdo-uplift%3FredirectUrl%3D%252Fpersonal-account&origin=PERTAX&accountType=individual">Don’t have a Government Gateway account</a></li>
+      <li><a href="https://www.tax.service.gov.uk/government-gateway-lost-credentials-frontend/choose-your-account?continue=%2Fpersonal-account%2Fdo-uplift%3FredirectUrl%3D%252Fpersonal-account&origin=PERTAX&forgottenOption=userId">Forgotten user ID</a></li>
+      <li><a href="https://www.tax.service.gov.uk/government-gateway-lost-credentials-frontend/choose-your-account?continue=%2Fpersonal-account%2Fdo-uplift%3FredirectUrl%3D%252Fpersonal-account&origin=PERTAX&forgottenOption=password">Forgotten password</a></li>
+      <li><a href="https://www.tax.service.gov.uk/government-gateway-lost-credentials-frontend/choose-password-saved?continue=%2Fpersonal-account%2Fdo-uplift%3FredirectUrl%3D%252Fpersonal-account&origin=PERTAX&forgottenOption=userIdAndPassword">Forgotten user ID and password</a></li>
+    </ul>
+
+    <h2 class="heading-medium">Doing your self assessment?</h2>
+    <p>You can also <a href="/intro{{formQuery}}&requestId=self-assessment">sign in with GOV.UK Verify</a>. You need your unique tax reference (UTR) the first time you sign in.</p>
+    <a href="/intro{{formQuery}}&requestId=self-assessment"><img src="/public/images/govuk-verify-small-black-text.png" alt="Sign in using GOV.UK Verify"></a>
+  </article>
+</div>
+
+{% endblock %}
+
+
+
+
+

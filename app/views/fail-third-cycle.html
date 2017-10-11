@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Complete your claim or access your Universal Credit account{% endblock %}
+
+{% block page_content %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">{{serviceProvider}} were unable to match you to their records</h1>
+
+      <p>You have successfully verified your account with your certified company, however DVLA are unable to match your driving licence details.</p>
+
+      <p>You will still be able to log in to other government services with your certified company.</p>
+
+      <ul class='list list-bullet'>
+        <li>you've recently had a change in your circumstances, and they aren't yet updated online</li>
+        <li>the certified company doesn't have access to enough information about you</li>
+      </ul>
+      
+      <h2 class="heading-medium">Other ways to {{serviceNameLower}}</h2>
+      
+      {{serviceOtherWays | safe}}
+
+      <p>You can:</p>
+      <ul class="list list-bullet">
+        <li><a href="/select-documents?requestId={{ requestId }}&selection=true&above_age_threshold=true&resident_last_12_months=true&userLOA=2&loa1_kbv_done=true">try verifying your identity with another certified company</a> to the level needed by DVLA</li>
+        <li>view the <a href="/other-ways{{formQuery}}">other ways to change the address on your driving licence</a> </li>
+        <li>go back to <a href="{{serviceCompleteURL}}{{formQuery}}">{{serviceNameLower}}</a></li>
+      </ul>
+  </div>
+</div>
+{% endblock %}

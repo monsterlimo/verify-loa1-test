@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Complete your claim or access your Universal Credit account{% endblock %}
+
+{% block page_content %}
+
+<div class="article-container column-two-thirds">
+
+  <header class="page-header">
+    <h1 class="heading-large">You need to verify your identity to a higher level</h1>
+  </header>
+
+  <article>
+
+    <p>To change the address on your driving licence, DVLA needs you to verify your identity to a higher level. This is so someone else can’t change your personal details by pretending to be you.</p>
+
+    <div class="sign-in-wrap">
+      <div class="button-wrap">
+        <a class="button button-start" href="{{ idpRoot }}/{{ idp.slug }}/uplift-start{{formQuery | safe}}">
+          <strong>Continue to {{idp.name}}</strong>
+        </a>
+      </div>
+    </div>
+
+    <p>If {{idp.name}} isn’t the company that you have an identity account with, <a href="/sign-in{{formQuery}}">sign in to a different certified company</a>.</p>
+
+  </article>
+</div>
+
+{% endblock %}

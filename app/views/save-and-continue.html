@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block page_title %}{{ query.idp }} were unable to verify your identity{% endblock %}
+
+{% block page_content %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">{{ idp.name }} has saved your information</h1>
+
+      <p>When you're ready to carry on verifying your identity, go back to <a href="{{serviceStartURL | safe}}?requestId={{requestId}}{% if query.userLOA == 0 %}&userLOA=0{% endif %}">{{serviceNameLower}}</a></p>
+			
+
+
+      <p>You’ll need the username and password you created to sign in to {{ idp.name }}.</p>
+
+
+  </div>
+</div>
+
+{% endblock %}

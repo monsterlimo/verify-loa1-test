@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Do you have a mobile phone or tablet? - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <h1 class="heading-large">Continue to {{ idp.name }}</h1>
+
+
+    <p>You’ll now verify your identity on {{ idp.name }}’s website.</p>
+
+    <p>They’ll give you an identity account you can use wherever you see the GOV.UK Verify logo.</p>
+
+    <!-- <a href="{{ idpRoot }}/{{ idp.slug }}/verify?requestId={{ requestId }}{% if verify != null %}&amp;verify={{ verify }}{% endif %}" class="button">Continue to {{ idp.name }}</a> -->
+
+    <a href="{{ idpRoot }}/{{ idp.slug }}/verify{{formQuery | safe}}" class="button">Continue to {{ idp.name }}</a>
+
+    <p>or <a href="javascript:history.back()">choose another certified company</a></p>
+  </div>
+
+{% endblock %}

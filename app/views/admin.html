@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block page_title %}GOV.UK Verify admin tool{% endblock %}
+
+{% block page_content %}
+
+<div class="content-inner">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <header class="page-header">
+        <h1 class="heading-xlarge">GOV.UK Verify admin tool</h1>
+      </header>
+
+      <p><a href="/admin/add-service" class="button">Add a service</a></p>
+
+      <h3 class="heading-medium">LOA1 Services</h3>
+
+      <ul class="list list-bullet">
+        {% for service in services %}
+          {% if service.LOA == 0 %}
+            <li class="service">
+              <a href="/admin/services/{{service.slug | safe}}">{{service.name}}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      <hr>
+
+      <p><a href="https://govuk-verify.herokuapp.com/admin">View stable LOA2 prototypes</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

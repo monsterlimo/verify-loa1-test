@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Renew or update your driving licence{% endblock %}
+
+{% block page_content %}
+
+<script src="/public/javascripts/govuk/country-picker/jquery-1.11.1.min.js"></script>
+  <script src="/public/javascripts/govuk/country-picker/jquery-ui.min.js"></script>
+  <script src="/public/javascripts/govuk/country-picker/jquery.select-to-autocomplete.js"></script>
+  <script src="/public/javascripts/govuk/country-picker/country-picker.js"></script>
+  <script>
+    (function($){
+      $(function(){
+        $('select').selectToAutocomplete();
+        $('form').submit(function(){
+          alert( $(this).serialize() );
+          return false;
+        });
+      });
+    })(jQuery);
+  </script>
+
+
+<!--  -->
+
+<div class="article-container column-two-thirds">
+
+  <header class="page-header">
+    <h1 class="heading-large">Which country is your European digital identity from?</h1>
+  </header>
+
+  <article>
+
+  <!--     <h3 class="heading-small">Which EU country is your eID from?</h3>
+ -->
+<!--     COUNTRY PICKER -->
+    <div class="country-picker">
+      <form>
+        <select name="Country" id="country-selector" class="form-control-2-3" autofocus="autofocus" autocorrect="off" autocomplete="off">
+          <option value="null"></option>
+          <option value="Austria" data-alternative-spellings="Austria Republic of Austria AT  A Österreich  Osterreich">Austria</option>
+          <option value="Belgium" data-alternative-spellings="Belgium Kingdom of Belgium  BE  B Belgique België Belgie  ">Belgium</option>
+          <option value="Bulgaria" data-alternative-spellings="Bulgaria Republic of Bulgaria  BG      ">Bulgaria</option>
+          <option value="Croatia" data-alternative-spellings="Croatia Republic of Croatia HR    Hrvatska  ">Croatia</option>
+          <option value="Republic of Cyprus" data-alternative-spellings="Cyprus Republic of Cyprus  CY      ">Republic of Cyprus</option>
+          <option value="Czech Republic" data-alternative-spellings="Czech Republic Czech Republic  CZ    Česká republika Ceska republika">Czech Republic</option>
+          <option value="Denmark" data-alternative-spellings="Denmark Kingdom of Denmark  DK  DK  Danmark ">Denmark</option>
+          <option value="Estonia" data-alternative-spellings="Estonia Republic of Estonia EE    Eesti ">Estonia</option>
+          <option value="Finland" data-alternative-spellings="Finland Republic of Finland FI  FIN Suomi Finland ">Finland</option>
+          <option value="France" data-alternative-spellings="France French Republic FR  F France  ">France</option>
+          <option value="Germany" data-alternative-spellings="Germany Federal Republic of Germany DE  D Deutschland ">Germany</option>
+          <option value="Greece" data-alternative-spellings="Greece Hellenic Republic EL  EL    ">Greece</option>
+          <option value="Hungary" data-alternative-spellings="Hungary Hungary HU    Magyarország  Magyarorszag">Hungary</option>
+          <option value="Ireland" data-alternative-spellings="Ireland Ireland IE  IRL Éire Eire Ireland ">Ireland</option>
+          <option value="Italy" data-alternative-spellings="Italy Italian Republic  IT  I Italia  ">Italy</option>
+          <option value="Latvia" data-alternative-spellings="Latvia Republic of Latvia  LV    Latvija ">Latvia</option>
+          <option value="Lithuania" data-alternative-spellings="Lithuania Republic of Lithuania LT    Lietuva ">Lithuania</option>
+          <option value="Luxembourg" data-alternative-spellings="Luxembourg Grand Duchy of Luxembourg LU  L Luxembourg  ">Luxembourg</option>
+          <option value="Malta" data-alternative-spellings="Malta Republic of Malta MT    Malta ">Malta</option>
+          <option value="Netherlands" data-alternative-spellings="Netherlands Kingdom of the Netherlands  NL  NL  Nederland ">Netherlands</option>
+          <option value="Poland" data-alternative-spellings="Poland Republic of Poland  PL    Polska  ">Poland</option>
+          <option value="Portugal" data-alternative-spellings="Portugal Portuguese Republic PT  P Portugal  ">Portugal</option>
+          <option value="Romania" data-alternative-spellings="Romania Romania RO    România Romania">Romania</option>
+          <option value="Slovakia" data-alternative-spellings="Slovakia Slovak Republic SK    Slovensko ">Slovakia</option>
+          <option value="Slovenia" data-alternative-spellings="Slovenia Republic of Slovenia  SI    Slovenija ">Slovenia</option>
+          <option value="Spain" data-alternative-spellings="Spain Kingdom of Spain  ES  E España  Espana">Spain</option>
+          <option value="Sweden" data-alternative-spellings="Sweden Kingdom of Sweden SE  S Sverige ">Sweden</option>
+          <option value="United Kingdom" data-alternative-spellings="United Kingdom United Kingdom of Great Britain and Northern Ireland  UK  UK  United Kingdom  ">United Kingdom</option>
+        </select>
+        
+      <input id="user_input" type="submit" onclick="showInput()" value="Select" class="button">
+
+    </form>
+
+    <div class="country-info">
+      <!-- IF COUNTRY HAS EIDAS -->
+      <div id='hasEidas'>
+        <h2 class="heading-medium">You can use your eID from <span id="display-hasEidas"></span></h2>
+        <p>You will be able to sign in to {{serviceNameLower}} using your [Name of eID] eID.</p>
+        <p><a class="button" href="{{ idpRoot }}/spain/sign-in{{formQuery}}">Sign in with your eID</a></p>
+        <p>If your eID is not yet set up, visit you countries website to find out how...</p>
+      </div>
+      <!-- ELSE -->
+      <div id='noEidas'>
+        <h2 class="heading-medium">You cannot currently use eID's from <span id="display-noEidas"></span> to sign in to this service</h2>
+      </div>
+    </div>
+    </br>
+    <p><a href="/select-signin{{ formQuery | safe }}">Try another way to sign in</a>.</p>
+
+  </div>
+
+  <!--  -->
+
+<!--     <div class="actions">
+      <input type="submit" value="Continue" class="button" id="next-button">
+      <a href="javascript:history.back()">Choose another way to sign in</a>
+    </div> -->
+
+  </article>
+</div>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Do you have a mobile phone or tablet? - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">Other identity documents</h1>
+
+    <p>Some certified companies can use identity documents from other countries to verify you.</p>
+
+    <p class="panel panel-border-narrow">The more identity documents you can provide now, the more likely it is that the company can verify you successfully.</p>
+
+    <form id="validate-other-documents" class="select-other-documents-form" novalidate="novalidate" data-msg="Please answer all the questions" action="/select-proof-of-address{{ formQuery | safe }}" accept-charset="UTF-8" method="get">
+
+      {{ formData | safe }}
+
+      <div class="form-group">
+        <fieldset class="">
+          <!-- <legend>Do you have any other UK issued identity documents?</legend>
+
+          <p>Certified companies can only accept certain identity documents.</p>
+
+          <div class="form-group">
+            <label class="block-label">
+              <input name="otherUKID" type="checkbox" value="true">
+              Birth certificate
+            </label>
+            <label class="block-label">
+              <input name="otherUKID" type="checkbox" value="true">
+              Marriage certificate
+            </label>
+            <label class="block-label">
+              <input name="otherUKID" type="checkbox" value="true">
+              Biometric residence permit
+            </label>
+            <label class="block-label">
+              <input name="otherUKID" type="checkbox" value="true">
+              UK Military identity card
+            </label>
+            <label class="block-label">
+              <input name="otherUKID" type="checkbox" value="true">
+              PASS proof of age card
+            </label>
+            <label class="block-label">
+              <input name="otherUKID" type="checkbox" value="true">
+              County Court Judgement (CCJ)
+            </label>
+            <label class="block-label">
+              <input name="otherUKID" type="checkbox" value="true">
+              Photographic firearms certificate
+            </label>
+          </div> -->
+
+<!--  -->
+
+        <div class="form-group">
+          <fieldset class="">
+            <legend>Do you have a non-UK passport, ID card or driving licence?</legend>
+            <label class="block-label" for="select_other_documents_form_passport_true">
+              <input type="radio" value="true" name="non_uk_passport" id="select_other_documents_form_passport_true" aria-required="true">
+              Yes
+            </label>
+            <label class="block-label" for="select_other_documents_form_passport_false">
+              <input type="radio" value="false" name="non_uk_passport" id="select_other_documents_form_passport_false">
+              No
+            </label>
+          </fieldset>
+        </div>
+
+        <div id="validation-error-message-js"></div>
+
+        <div class="actions">
+          <input type="submit" value="Continue" class="button" id="next-button">
+          <a href="/select-proof-of-address{{ formQuery | safe }}">I don't have any of these documents</a>
+        </div>
+      </form>  </div>
+    </div>
+    {% endblock %}

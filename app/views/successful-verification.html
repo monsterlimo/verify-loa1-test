@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Choose a certified company - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+
+  <div class="column-two-thirds">
+
+    <div class="govuk-box-highlight">
+      <h1 class="bold-large">{{ idp.name }} has verified </br>your identity</h1>
+      
+      </p>
+    </div>
+    
+    <p>You can now use your {{ idp.name }} identity account to sign in whenever you see the GOV.UK Verify logo.</p>
+
+    <h2 class='heading-medium'>Government services using GOV.UK Verify.</h2>
+
+    <p>GOV.UK Verify is new, and government services are joining all the time. The current services you can access are:</p>
+
+    <ul class="list-bullet list">
+      <li><a href="/self-assessment/start-self-assessment-1?requestId=self-assessment">Sign in and file your Self Assessment tax return</li>
+      <li><a href="/start-check-state-pension">Check your State Pension</li>
+      <li><a href="/start-personal-tax-account">Sign in to your personal tax account</li>
+      <li><a href="/view-driving-record">View or share your driving licence information</li>
+      <li><a href="https://www.gov.uk/apply-universal-credit">Apply for Universal Credit</li>
+      <li><a href="https://www.gov.uk/report-driving-medical-condition">Report a medical condition that affects your driving</li>
+      <li><a href="https://www.gov.uk/renew-medical-driving-licence">Renew your short-term medical driving licence</li>
+      <li><a href="https://www.gov.uk/check-income-tax-current-year">Check your Income Tax for the current year</li>
+      <li><a href="https://www.gov.uk/claim-redundancy">Claim for redundancy and monies owed</a></li>
+      <li><a href="https://www.gov.uk/help-friends-family-tax">Help friends or family with their tax</li>
+      <li><a href="https://www.gov.uk/update-company-car-details">Check or update your company car tax</li>
+      <li><a href="https://www.gov.uk/rural-payments">Update your rural payments details</li>
+    </ul>
+
+{% endblock %}

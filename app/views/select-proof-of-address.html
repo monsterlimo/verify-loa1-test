@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Do you have a mobile phone or tablet? - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">Proof of your address</h1>
+
+    <p>Certified companies need to check your address is correct. They do this by checking with your bank or credit card provider.</p>
+
+    <div class="panel panel-border-narrow">
+      <p>This is a free service, and the certified company can not see any of your financial transactions.</p>
+    </div>
+
+    <form id="validate-your-proof-of-address" class="select-your-proof-of-address-form" novalidate="novalidate" data-msg="Please answer all the questions" action="/select-phone{{ formQuery | safe }}" accept-charset="UTF-8" method="get">
+
+      {{ formData | safe }}
+
+<!--           <h3 class="heading-medium">Which of these do you have?</h3>
+          <p>Select all that apply</p>
+          <div class="form-group">
+            <label class="block-label">
+              <input name="bank_account" type="checkbox" value="true">
+              UK bank account
+            </label>
+            <label class="block-label">
+              <input name="debit_card" type="checkbox" value="true">
+              Debit card
+            </label>
+            <label class="block-label">
+              <input name="credit_card" type="checkbox" value="true">
+              Credit card
+            </label>
+          </div> -->
+
+      <h2 class="heading-medium">Do you have the following:</h2>
+
+ 
+      <div class="form-group">
+        <fieldset class="inline">
+          <legend class="heading-small">UK bank account?</legend>
+          <label class="block-label" for="select_proof_of_address_form_bank_account_true">
+            <input type="radio" value="true" name="bank_account" id="select_proof_of_address_form_bank_account_true" aria-required="true">
+            Yes
+          </label>
+          <label class="block-label" for="select_proof_of_address_form_bank_account_false">
+            <input type="radio" value="false" name="bank_account" id="select_proof_of_address_form_bank_account_false">
+            No
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <fieldset class="inline" >
+          <legend class="heading-small">Debit card?</legend>
+          <label class="block-label" for="select_proof_of_address_form_debit_card_true">
+            <input type="radio" value="true" name="debit_card" id="select_proof_of_address_form_debit_card_true" aria-required="true">
+            Yes
+          </label>
+          <label class="block-label" for="select_proof_of_address_form_debit_card_false">
+            <input type="radio" value="false" name="debit_card" id="select_proof_of_address_form_debit_card_false">
+            No
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <fieldset class="inline">
+          <legend class="heading-small">Credit card?</legend>
+          <label class="block-label" for="select_proof_of_address_form_credit_card_true">
+            <input type="radio" value="true" name="credit_card" id="select_proof_of_address_form_credit_card_true" aria-required="true">
+            Yes
+          </label>
+          <label class="block-label" for="select_proof_of_address_form_credit_card_false">
+            <input type="radio" value="false" name="credit_card" id="select_proof_of_address_form_credit_card_false">
+            No
+          </label>
+        </fieldset>
+      </div> 
+
+        <div id="validation-error-message-js"></div>
+
+        <div class="actions">
+          <input type="submit" value="Continue" class="button" id="next-button">
+          <a href="/select-phone{{ formQuery | safe }}">I don't have any of these</a>
+        </div>
+
+
+      </form>  
+    </div>
+  </div>
+    {% endblock %}

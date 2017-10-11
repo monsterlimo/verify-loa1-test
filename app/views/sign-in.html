@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}About choosing a company - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+<div class="grid-row">
+<div class="column-two-thirds">
+  <h1 class="heading-xlarge">Who do you have an identity account with?</h1>
+  <!-- <div class="panel panel-border-wide">
+    <p>To report a medical condition that affects your driving, DVLA needs you to verify your identity to a higher level. If you haven’t already done this, your certified company will ask you additional questions to get you to the required level when you sign in.</p>
+  </div> -->
+  <p>If you don’t have an identity account, you can <a href="/about{{ formQuery | safe }}&selection=true">start now</a>.</p>
+</div>
+</div>
+{% for idp in idps %}
+{% if loop.index0 % 3 == 0 or loop.first %}
+<div class="grid-row">
+{% endif %}
+
+  <div class="column-one-third">
+    <div class="company">
+      <div class="company-inner">
+        <div class="company-logo">
+          <div class="company-logo-inner">
+
+            <img src="/public/images/idp-logos/{{idp.slug}}.png" alt="{{idp.name}}">
+          </div>
+        </div>
+
+        <div class="button-wrap">
+          <a class="button" href="{{idpRoot}}/{{idp.slug}}/sign-in{{formQuery}}&idp={{idp.slug}}">
+            Select {{idp.name}}
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{% if loop.index0 % 3 == 2 or loop.last %}
+</div>
+{% endif %}
+{% endfor %}
+
+<p><a href="#">I can’t remember which company verified me</a></p>
+
+{% endblock %}

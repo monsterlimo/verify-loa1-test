@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Do you have a mobile phone or tablet? - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">Do you have a mobile phone or tablet?</h1>
+
+    <p>Certified companies can send security codes to your mobile.</p>
+
+    <form id="validate-phone" class="select-phone-form" novalidate="novalidate" data-msg="Please answer all the questions" action="/choose-a-certified-company{{ formQuery | safe }}" accept-charset="UTF-8" method="get">
+
+      {{ formData | safe }}
+
+      <div class="form-group">
+        <fieldset class="inline">
+          <legend class="visually-hidden">Do you have a mobile phone or tablet?</legend>
+          <label class="block-label" for="select_phone_form_mobile_phone_true">
+            <input type="radio" value="true" name="mobile_phone" id="select_phone_form_mobile_phone_true" aria-required="true">
+            Yes
+          </label>
+          <label class="block-label" for="select_phone_form_mobile_phone_false">
+            <input type="radio" value="false" name="mobile_phone" id="select_phone_form_mobile_phone_false">
+            No
+          </label>
+        </fieldset>
+        </div>
+        <div id="smartphone-question" class="form-group panel panel-border-narrow js-hidden">
+          <fieldset>
+            <legend>Can you install apps on your device?</legend>
+            <p>Some certified companies ask you to download a free app and use your phone's camera as part of verifying your identity.</p>
+            <label class="block-label" for="select_phone_form_smart_phone_true">
+              <input type="radio" value="true" name="apps" id="select_phone_form_smart_phone_true">
+              Yes
+            </label>
+            <label class="block-label" for="select_phone_form_smart_phone_unsure">
+              <input id="select_phone_form_smart_phone_unsure" type="radio" value="preferNot" name="apps">
+              Yes, but I'd prefer not to
+            </label>
+            <label class="block-label" for="select_phone_form_smart_phone_false">
+              <input id="select_phone_form_smart_phone_false" type="radio" value="false" name="apps">
+              No
+            </label>
+          </fieldset>
+        </div>
+
+        <div id="landline-question" class="form-group panel panel-border-narrow js-hidden">
+          <fieldset class="inline">
+            <legend>Do you have a landline?</legend>
+            <label class="block-label" for="select_phone_form_landline_true">
+              <input type="radio" value="true" name="landline" id="select_phone_form_landline_true">
+              Yes
+            </label>
+
+            <label class="block-label" for="select_phone_form_landline_false">
+              <input type="radio" value="false" name="landline" id="select_phone_form_landline_false">
+              No
+            </label>
+          </fieldset>
+        </div>
+        <div id="validation-error-message-js"></div>
+
+        <div class="actions">
+          <input type="submit" value="Continue" class="button" id="next-button">
+        </div>
+      </form>  </div>
+    </div>
+    {% endblock %}

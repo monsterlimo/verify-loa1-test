@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block page_title %}About {{ idp.name }} - GOV.UK Verify - GOV.UK{% endblock %}
+
+{% block page_content %}
+
+<div class="content-inner">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">{{ idp.name }}</h1>
+
+      <div class="about-idp-content">
+        <p class="subtitle">Information provided by {{ idp.name }}</p>
+
+        {% if idp.slug == "post-office" %}
+        <p>
+          At Post Office, we aspire to be at the very heart of customers’ choice by becoming the most trusted provider of essential services to every person in the land.
+        </p>
+        <p>
+
+          We’re Europe’s largest retail network and the largest financial services chain in the UK with more branches than all of the UK’s banks and building societies put together. We also have growing direct channels such as contact centres and online – meaning we’re there for more customers, in more ways.
+        </p>
+        <p>
+
+          We are proud to have:
+        </p>
+        <p>
+
+        <ul class="list list-bullet">
+          <li>Over 370 years of service</li>
+          <li>More than 170 products and services</li>
+          <li>Over 11,500 Post Office branches nationwide run by local people</li>
+          <li>Over 20 million customer visits &amp; 47 million transactions per week</li>
+        </ul>
+
+        <p>
+          At the Post Office our aim is to provide you with the things that are important to you – from your mail to your broadband package, your car insurance to your savings account. Whether you pop into a branch or shop online, you can be sure all your needs will be handled with care. That’s the Post Office promise.
+        </p>
+        <p>
+          By registering with Post Office for your identity profile, You'll be able to access government services as well as products and services from Post Office and our trusted partners using a simple, secure and reliable single log on process.
+        </p>
+        <p>
+          Registration is quick and straightforward. We will ask you to provide your name and address details and to prove that you are who you say you are by confirming information shared with us by other companies with whom you have an existing relationship.
+        </p>
+
+        {% elif idp.slug == "digidentity" %}
+
+        <p>Digidentity makes online identification easier, quicker, and more secure.</p>
+        <p>We enable safe digital communications between individuals and government both in the United Kingdom and the Netherlands, and are continuously developing new and improved services.</p>
+        <p>Our rigorous approach to privacy and security means that not even Digidentity employees will be able to access your user data.</p>
+        <p>We consider good service to be as important as infallible security, and we are available via email and telephone for support, so any complaints or problems will be resolved swiftly</p>
+
+        {% elif idp.slug == "experian" %}
+
+        <p>Experian carries out around 4 million identity checks to protect consumers and businesses every year, so you can trust Experian to hold your information. Experian can help identify who you are so you can access online government services quickly and easily. Using this service will not affect your credit score.</p>
+
+        <p>Experian holds secure personal and financial information on over 45 million individuals in the UK. The UK Government chose Experian as one of the first companies to help you access its services online because of its experience in this area with businesses and consumers across the world.</p>
+
+        {% elif idp.slug == "royal-mail" %}
+
+        <p>Royal Mail is the UK’s designated postal service provider, supporting customers, businesses and communities across the country. We’re the only company that has the capability to deliver a ‘one-price-goes-anywhere’, six-days-a-week service to more than 29 million addresses across the UK. </p>
+
+        <p>For most of our history, Royal Mail has been a public service, operating as a government department or public corporation. But in October 2013, more than 700,000 members of the public bought shares in Royal Mail when it was floated on the London Stock Exchange. </p>
+
+        <p>Royal Mail joined GOV.UK Verify in June 2015. We’ve partnered with CitizenSafe to provide the latest technology in identity verification so we can focus on delivering customer support.</p>
+
+        {% elif idp.slug == "barclays" %}
+
+        <p>Barclays is a British multinational banking and financial services company headquartered in London. It has operations in over 50 countries and territories and has around 48 million customers. </p>
+
+        <!-- <p>You don’t need to be an existing customer for Barclays to verify your identity. If you have a bank account with Barclays, you’ll still be asked to provide personal information as part of the verification process.</p> -->
+
+        {% elif idp.slug == "citizensafe" %}
+
+        <p>CitizenSafe - citizen identity verification for the public sector.</p>
+
+        <p>CitizenSafe allows you to access and transact with online government services, rather than through traditional contact channels. Data security is critical, and putting personal information and entitlements online carries a risk. CitizenSafe delivers a single and secure interface that verifies you when you first use the system, then issues a unique electronic identity ‘token’ for all subsequent online transactions.</p>
+
+        <p>Features of CitizenSafe:</p>
+
+        <ul class="list list-bullet">
+          <li>instant verification</li>
+          <li>one username and password for all online government services</li>
+          <li>eliminates the inconvenient and inefficient traditional practices for verifying user identity</li>
+        </ul>
+
+        <p>CitizenSafe is part of CitizenSafe.</p>
+
+        {% elif idp.slug == "morpho" %}
+
+        <p>SecureIdentity is the new government verification service from Morpho, the world leader in government identity.</p>
+
+        <p>For over 20 years, we’ve been working with governments and major institutions to help people like you access the critical information you need whenever privacy is a priority.</p>
+
+        <p>We’ve already provided more than 2.5 billion people with the secure identity documents they need to travel, trade and access secure services online, and our systems successfully authenticate over 900,000 transactions every day. Now, the government-grade secure identity services we specialise in are available to you directly. For more information, search ‘SecureIdentity’.</p>
+
+        {% endif %}
+      </div>
+
+      <p><a class="button choose-company-link" href="/redirect-to-idp{{ formQuery | safe }}">Choose {{ idp.name }}</a></p>
+      <p>or <a href="javascript:history.back()">choose another certified company</a></p>
+    </div>
+  </div>
+</div>
+{% endblock %}
