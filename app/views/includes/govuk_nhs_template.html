@@ -47,12 +47,12 @@
     </div>
 
     
-    <header role="banner" id="global-header" class="global-header-nhs {% block header_class %}{% endblock %}">
-      <div class="header-wrapper-nhs">
+    <header role="banner" id="global-header" class="{% block header_class %}{% endblock %}">
+      <div class="header-wrapper">
         <div class="header-global">
           <div class="header-logo">
-            <a href="#" title="{{ logo_link_title|default('Go to the GOV.UK homepage') }}" id="logo2" class="logo-nhs content">
-              <img src="{{ asset_path }}images/logotype-nhs-colour__reverse@2x.png" height="32" width="79 alt="NHS Logo">
+            <a href="{{ homepage_url }}" title="{{ logo_link_title|default('Go to the homepage') }}" id="logo" class="logo-nhs content">
+              <img src="{{ asset_path }}images/logotype-nhs-colour@2x.png" width="79" height="32" alt="">
             </a>
           </div>
           {% block inside_header %}{% endblock %}

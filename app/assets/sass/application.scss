@@ -78,32 +78,29 @@
   padding-right: 15px;
 }
 
-.global-header-nhs {
-  background-color: #005eb8 !important;
+// NHS branding tweaks for user testing
+
+#global-header {
+  //background-color: #005eb8 !important;
+  background-color: #FFFFFF !important;
 }
 
 #global-header .header-wrapper {
-  background-color: #005eb8 !important;
+  //background-color: #005eb8 !important;
+  background-color: #FFFFFF !important;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-.header-wrapper-nhs {
-  background-color: #005eb8;
-  padding-left: 15px;
-  padding-right: 15px;
+#global-header-bar {
+  background-color: #003087 !important;
+  margin: 0 !important;
+  max-width: none !important;
+  height: 2px;
 }
 
 .logo-nhs {
-  float: none;
-  overflow: visible;
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
-  text-decoration: none;
-  text-rendering: optimizeLegibility;
-  border-bottom: 1px solid transparent;
-  background: transparent;
-  background-size: auto;
-  background-position: 0 0;
-
+  background: url(../images/logotype-nhs-colour__reverse@2x.png) no-repeat !important;
+  //background: url(../images/logotype-nhs-colour@2x.png) no-repeat !important;
+  background-size: 79px 32px !important;
 }
-
