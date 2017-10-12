@@ -168,18 +168,21 @@ router.get('/about', function (req, res) {
   var service = getService(res.locals.requestId);
   serviceLOA = service.LOA;
 
+  res.redirect('/choose-a-certified-company' + res.locals.formQuery + '&above_age_threshold=true&resident_last_12_months=true&driving_licence=true&driving_licence_issuer=true&passport=true&bank_account=true&debit_card=true&credit_card=true&mobile_phone=true&apps=true');
 
-  if (req.query.selection == "false") {
-    res.redirect('/sign-in' + '?userLOA=1&requestId=' + res.locals.requestId)
-  
-  // } else if (serviceLOA == "1" || serviceLOA == "0"){
+
+
+  // if (req.query.selection == "false") {
+  //   res.redirect('/sign-in' + '?userLOA=1&requestId=' + res.locals.requestId)
+  //
+  // // } else if (serviceLOA == "1" || serviceLOA == "0"){
+  // //   console.log('serviceLOA: ' + serviceLOA)
+  // //   res.redirect('/loa1-signin'+res.locals.formQuery);
+  //
+  // } else {
   //   console.log('serviceLOA: ' + serviceLOA)
-  //   res.redirect('/loa1-signin'+res.locals.formQuery);
-  
-  } else {
-    console.log('serviceLOA: ' + serviceLOA)
-    res.render('about');
-  }
+  //   res.render('about');
+  // }
 });
 
 router.get('/select-signin', function (req, res) {
@@ -191,13 +194,13 @@ console.log(serviceLOA)
   }
 });
 
-router.get('/about-choosing-a-company', function (req, res) {
+router.get('/about2', function (req, res) {
 
   if (res.locals.serviceLOA == "0") {
     res.redirect('/choose-a-certified-company' + res.locals.formQuery + '&above_age_threshold=true&resident_last_12_months=true&driving_licence=true&driving_licence_issuer=true&passport=true&bank_account=true&debit_card=true&credit_card=true&mobile_phone=true&apps=true');
 
   } else {
-    res.render('about-choosing-a-company');
+    // res.render('about-choosing-a-company');
   }
 });
 

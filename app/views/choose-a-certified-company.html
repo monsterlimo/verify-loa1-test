@@ -7,31 +7,63 @@
   <div class="grid-row">
 
     <div class="column-two-thirds">
-      <h2 class="heading-large">Choose a certified company to verify your identity</h2>
-      <p class="lede ">You don’t have to be an existing customer with a company.</p> 
-      <p>
-      
-        They ask you to provide personal information and then check it's correct using the new, secure systems they built
-        {% if serviceLOA != '0' %}
-          , including checking your documents with
-          {% if query.passport == 'true' %}
-            HM Passport Office
-            {% if query.driving_licence == 'true' %}
-             and DVLA
-            {% endif %}
-          {% elif  query.driving_licence == 'true' %}
-            DVLA
-          {% endif %}
-        {% endif %}
-      .</p>
-      <p class="large-top">
-        {% if serviceLOA == 2 %}Based on your answers, {% endif %}{{ available_idps | length }}&nbsp;{{ "companies" if available_idps.length > 1 else "company" }} can verify you now:
+      <!--         <h2 class="heading-large">Choose a certified company to verify your identity</h2>
+
+              <p>Verify works with certified companies to prove that you are who you say you are.</p>
+
+      <p>The company will ask you for some details and double check them against data from other sources such as DVLA and HM Passports Office or credit files.
       </p>
-      <ul class="list list-bullet">
-        <li><a href="/why-companies">Why there’s a choice of companies</a></li>
-      </ul>
+
+      <p>Using certified companies means that the Government won't handle your personal data, and you get a choice of who does.</p>
+
+
+
+              <p>You’ll create an account and verify your identity on the company website. They’ve all met security standards set by government.</p>
+
+              <p>Verifying your identity takes about 5 minutes to complete, and there’s no charge for this service.</p>
+
+       -->
+      <!--  -->
+
+      <h1 class="heading-large">How GOV.UK Verify works</h1>
+
+      <p>Verify works with certified companies to prove that you are who you say you are. The company will ask you for some details and double check them against data from other sources such as DVLA and HM Passports Office.
+      </p>
+
+      <p>Using certified companies means that the Government won't handle your personal data, and you get a choice of who does.</p>
+
+      <p>Verifying your identity takes about 5 minutes to complete, and there’s no charge for this service.</p>
+
+      <p><a href="/why-companies">Why there are companies to choose from</a></p>
     </div>
-  </div>
+
+
+    <div class="column-two-thirds">
+      <h2 class="heading-medium">Choose a certified company to verify your identity</h2>
+      <!--<p class="lede ">You don’t have to be an existing customer with a company.</p> -->
+      <!--<p>-->
+      <!---->
+        <!--They ask you to provide personal information and then check it's correct using the new, secure systems they built-->
+        <!--{% if serviceLOA != '0' %}-->
+          <!--, including checking your documents with-->
+          <!--{% if query.passport == 'true' %}-->
+            <!--HM Passport Office-->
+            <!--{% if query.driving_licence == 'true' %}-->
+             <!--and DVLA-->
+            <!--{% endif %}-->
+          <!--{% elif  query.driving_licence == 'true' %}-->
+            <!--DVLA-->
+          <!--{% endif %}-->
+        <!--{% endif %}-->
+      <!--.</p>-->
+      <!--<p class="large-top">-->
+        <!--{% if serviceLOA == 2 %}Based on your answers, {% endif %}{{ available_idps | length }}&nbsp;{{ "companies" if available_idps.length > 1 else "company" }} can verify you now:-->
+      <!--</p>-->
+      <!--<ul class="list list-bullet">-->
+        <!--<li><a href="/why-companies">Why there’s a choice of companies</a></li>-->
+      <!--</ul>-->
+    <!--</div>-->
+  <!--</div>-->
 
 
   <div id="matching-idps">
@@ -49,7 +81,7 @@
 
       <div class="idp-option">
 
-        <a href="/redirect-to-idp{{ formQuery | safe }}&amp;idp={{ idp.slug }}" class="button">Choose {{ idp.name }}</a>
+        <a href="https://nhs-id-3.herokuapp.com/{{ idp.slug }}/create-account{{formQuery | safe}}" class="button">Choose {{ idp.name }}</a>
         <div class="phone-prefer-not">
           {% if query.apps == 'preferNot' %}
             {% if idp.name == 'Digidentity' %} You <strong>may</strong> have to download an app with {{idp.name}}.
