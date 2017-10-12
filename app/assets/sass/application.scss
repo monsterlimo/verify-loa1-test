@@ -77,3 +77,33 @@
   // padding-left:15px;
   padding-right: 15px;
 }
+
+.global-header-nhs {
+  background-color: #005eb8 !important;
+}
+
+#global-header .header-wrapper {
+  background-color: #005eb8 !important;
+}
+
+.header-wrapper-nhs {
+  background-color: #005eb8;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.logo-nhs {
+  float: none;
+  overflow: visible;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  background-size: auto;
+  background-position: 0 0;
+
+}
+
